@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\EmpresaController;
+use App\Http\Controllers\MenuPrincipalController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,3 +28,8 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+
+Route::get('menu-principal',[MenuPrincipalController::class,'index'])->name('menu-principal.index');
+
+Route::resource('empresa', EmpresaController::class)->names('empresa');
