@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AreaController;
 use App\Http\Controllers\EmpresaController;
+use App\Http\Controllers\GeneroController;
 use App\Http\Controllers\MenuPrincipalController;
 use App\Http\Controllers\PreguntaController;
 use Illuminate\Support\Facades\Route;
