@@ -80,13 +80,6 @@
         <div class="container_centering">
             <div class="container">
                 <div class="row justify-content-between">
-                    <!-- <div class="col-xl-6 col-lg-6 d-flex align-items-center">
- <div class="main_title_1">
- <h3><img src="img/main_icon_1.svg" width="80" height="80" alt=""> Lisega</h3>
- <p>An mei sadipscing dissentiet, eos ea partem viderer facilisi. Brute nostrud democritum in vis, nam ei erat zril mediocrem. No postea diceret vix.</p>
- <p><em>- The Satisfyc Team</em></p>
- </div>
- </div> -->
                     <!-- /col -->
                     <div class="col-xl-12 col-lg-12">
                         <div id="wizard_container">
@@ -173,17 +166,35 @@
                                             <strong>1 of 1</strong>Por favor, completar primero los
                                             sguientes datos:
                                         </h3>
-                                        <div class="form-group">
-                                            <label for="telephone">Fecha de Nacimiento</label>
-                                            <input type="date" name="telephone" id="telephone"
-                                                class="form-control" required />
-                                        </div>
                                         <div class="row">
                                             <div class="col-lg-6 col-md-6 col-6">
+                                                <div class="form-group">
+                                                    <label for="telephone">Fecha de Nacimiento</label>
+                                                    <input type="date" name="telephone" id="telephone"
+                                                        class="form-control" required />
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
                                                 <div class="form-group">
                                                     <label for="age">Fecha de Ingreso</label>
                                                     <input type="date" name="age" id="age"
                                                         class="form-control" required />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6 col-6">
+                                                <div class="form-group">
+                                                    <label for="age">Area</label>
+                                                    <select name="" id="" class="form-control"
+                                                        required>
+
+                                                        @foreach ($areas as $area)
+                                                            <option value="{{ $area->id }}">
+                                                                {{ $area->descripcion }}</option>
+                                                        @endforeach
+
+                                                    </select>
                                                 </div>
                                             </div>
                                             <div class="col-6">
@@ -207,6 +218,7 @@
                                     @php
                                         $ultima_pregunta = $preguntas->last();
                                         $id = $ultima_pregunta->id;
+                                        $total = $preguntas->count();
                                     @endphp
 
                                     @foreach ($preguntas as $pregunta)
@@ -221,7 +233,7 @@
                                                 </div>
                                             </div>
                                             <h3 class="main_question">
-                                                <strong>1 de 5</strong>{{ $pregunta->descripcion }}
+                                                <strong>{{$pregunta->id}} de {{$total}}</strong>{{ $pregunta->descripcion }}
                                             </h3>
                                             <div class="review_block">
                                                 <ul>
