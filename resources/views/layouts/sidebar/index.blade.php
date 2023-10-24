@@ -147,7 +147,7 @@
         </li>
 
         <li class="nav-item {{ Request::is('vaso-leche') | Request::is('vaso-leche/*') ? 'active' : '' }}"><a
-                class="d-flex align-items-center" href="">
+                class="d-flex align-items-center" href="{{route('areas.index')}}">
                 {{-- <i data-feather="check-square"></i> --}}
                 <i data-feather='users'></i>
                 
