@@ -32,7 +32,7 @@
 
     <script type="text/javascript">
         function delayedRedirect() {
-            var url = "{{ route('pregunta.index') }}";
+            var url = "{{ route('encuesta.index') }}";
             window.location = url
         }
     </script>

@@ -14,11 +14,7 @@ class PreguntaController extends Controller
      */
     public function index()
     {
-        $preguntas = Pregunta::all();
-        $generos = Genero::all();
-        $areas = Area::all();
 
-        return view('welcome', compact('preguntas', 'generos', 'areas'));
     }
 
     /**
@@ -34,7 +30,7 @@ class PreguntaController extends Controller
      */
     public function store(Request $request)
     {
-        return view('gracias');
+        
     }
 
     /**

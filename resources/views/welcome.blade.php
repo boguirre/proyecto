@@ -87,7 +87,7 @@
                                 <div id="progressbar"></div>
                             </div>
                             <!-- /top-wizard -->
-                            <form id="wrapped" action="{{ route('pregunta.store') }}" method="POST"
+                            <form id="wrapped" action="{{ route('encuesta.store') }}" method="POST"
                                 autocomplete="off">
                                 @csrf
                                 <input id="website" name="website" type="text" value="" />

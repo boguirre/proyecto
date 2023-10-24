@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AreaController;
 use App\Http\Controllers\EmpresaController;
+use App\Http\Controllers\EncuestaController;
 use App\Http\Controllers\MenuPrincipalController;
 use App\Http\Controllers\PreguntaController;
 use Illuminate\Support\Facades\Route;
@@ -18,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return redirect()->route('pregunta.index');
+    return redirect()->route('encuesta.index');
 });
 
 Route::middleware([
@@ -37,3 +38,5 @@ Route::resource('areas', AreaController::class)->names('areas');
 
 Route::resource('empresa', EmpresaController::class)->names('empresa');
 Route::resource('pregunta', PreguntaController::class)->names('pregunta');
+Route::get('encuesta', [EncuestaController::class, 'index'])->name('encuesta.index');
+Route::post('encuesta/enviar_respuestas', [EncuestaController::class, 'store'])->name('encuesta.store');
