@@ -173,10 +173,10 @@
         <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="file-text"></i><span
                     class="menu-title text-truncate" data-i18n="Invoice">Encuesta</span></a>
             <ul class="menu-content">
-                <li><a class="d-flex align-items-center" href="app-invoice-list.html"><i data-feather="circle"></i><span
+                <li class="nav-item {{ Request::is('tipo-respuestas') | Request::is('tipo-respuestas/*') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('tipo-respuestas.index')}}"><i data-feather="circle"></i><span
                             class="menu-item text-truncate" data-i18n="List">Tipos De Respuesta</span></a>
                 </li>
-                <li><a class="d-flex align-items-center" href="app-invoice-preview.html"><i
+                <li class="nav-item {{ Request::is('dimensiones') | Request::is('dimensiones/*') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('dimensiones.index')}}"><i
                             data-feather="circle"></i><span class="menu-item text-truncate"
                             data-i18n="Preview">Dimensiones</span></a>
                 </li>

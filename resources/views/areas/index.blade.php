@@ -293,7 +293,7 @@
                                     <div class="col-md-12 mt-1">
                                         <label for="estado_actividad" class="form-label">Descripción</label>
 
-                                        <textarea class="form-control" name="descripcion" id="" cols="10" rows="2"></textarea>
+                                        <textarea class="form-control" name="descripcion" id="" cols="10" rows="2" required></textarea>
                                     </div>
 
                                 </div>

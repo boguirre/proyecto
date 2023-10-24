@@ -4,12 +4,12 @@
     <div class="content-header-left col-md-9 col-12 mb-2">
         <div class="row breadcrumbs-top">
             <div class="col-12">
-                <h2 class="content-header-title float-start mb-0">Lista de Géneros</h2>
+                <h2 class="content-header-title float-start mb-0">Lista de Tipo Respuesta</h2>
                 <div class="breadcrumb-wrapper">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="">Menu Principal</a>
                         </li>
-                        <li class="breadcrumb-item"><a href="{{ route('generos.index') }}">Géneros</a>
+                        <li class="breadcrumb-item"><a href="{{ route('tipo-respuestas.index') }}">Tipo Respuesta</a>
                         </li>
                         <li class="breadcrumb-item active">Lista
                         </li>
@@ -70,7 +70,7 @@
                 <div class="card">
                     <div class="card-header border-bottom p-1">
                         <div class="head-label">
-                            <h6 class="mb-0">Lista de Géneros</h6>
+                            <h6 class="mb-0">Lista de Tipo Respuesta</h6>
                         </div>
                         <div class="dt-action-buttons text-end">
                             <div class="dt-buttons d-inline-flex">
@@ -99,7 +99,7 @@
                                         <line x1="5" y1="12" x2="19" y2="12">
                                         </line>
                                     </svg>
-                                    <span class="align-middle">Registrar De Géneros</span>
+                                    <span class="align-middle">Registrar Tipo Respuesta</span>
                                 </button>
                             </div>
 
@@ -111,7 +111,7 @@
                         <form id="search-form" class="mb-3">
                             <div class="input-group">
                                 <input type="text" name="search" id="search-input" class="form-control"
-                                    placeholder="Buscar por descripción de género">
+                                    placeholder="Buscar por descripción de tipo respuesta">
                                 <button type="submit" class="btn btn-primary">Buscar</button>
                             </div>
                         </form>
@@ -128,29 +128,29 @@
                             </thead>
                             <tbody id="result-table">
 
-                                @foreach ($generos as $area)
+                                @foreach ($tipoRespuestas as $tipo_respuesta)
                                     <tr>
                                         <td>
                                             <a href="#" class="btn btn-primary btn-sm">
-                                                {{ $area->id }}
+                                                {{ $tipo_respuesta->id }}
                                             </a>
 
 
                                         </td>
 
                                         <td>
-                                            {{ $area->descripcion ?? 'No existe descripción.....' }}
+                                            {{ $tipo_respuesta->descripcion ?? 'No existe descripción.....' }}
                                         </td>
                                         <td>
-                                            <button class="btn {{ $area->estado == '1' ? 'btn-success' : 'btn-danger' }}">
-                                                {{ $area->estado == '1' ? 'Habilitado' : 'Deshabilitado' }}
+                                            <button class="btn {{ $tipo_respuesta->estado == '1' ? 'btn-success' : 'btn-danger' }}">
+                                                {{ $tipo_respuesta->estado == '1' ? 'Habilitado' : 'Deshabilitado' }}
 
                                             </button>
                                         </td>
 
                                         <td>
 
-                                            <form action="{{ route('generos.destroy', $area) }}" method="POST"
+                                            <form action="{{ route('tipo-respuestas.destroy', $tipo_respuesta) }}" method="POST"
                                                 class="desactivar">
                                                 @csrf
                                                 @method('DELETE')
@@ -158,15 +158,15 @@
 
                                                 <a href="#" class="btn btn-primary dt-button create-new"
                                                     data-bs-toggle="modal" data-bs-target="#editEvent"
-                                                    data-id="{{ $area->id }}" {{-- data-nombre="{{ $area->nombre }}" --}}
-                                                    data-descripcion="{{ $area->descripcion }}">
+                                                    data-id="{{ $tipo_respuesta->id }}" {{-- data-nombre="{{ $tipo_respuesta->nombre }}" --}}
+                                                    data-descripcion="{{ $tipo_respuesta->descripcion }}">
                                                     <i data-feather='edit'></i>
 
                                                 </a>
 
-                                                {{-- @can('generos.destroy') --}}
+                                                {{-- @can('areas.destroy') --}}
                                                 <button type="submit"
-                                                    class="btn btn-danger {{ $area->estado == '2' ? 'disabled' : '' }}">
+                                                    class="btn btn-danger {{ $tipo_respuesta->estado == '2' ? 'disabled' : '' }}">
                                                     <i data-feather='trash-2'></i>
                                                 </button>
                                                 {{-- @endcan --}}
@@ -175,15 +175,15 @@
 
 
                                         </td>
-                                        {{-- @can('generos.destroy') --}}
+                                        {{-- @can('areas.destroy') --}}
                                         <td class="text-center">
                                             <ul class="table-controls">
-                                                <form action="{{ route('generos.activar', $area) }}" method="POST"
+                                                <form action="{{ route('tipo-respuestas.activar', $tipo_respuesta) }}" method="POST"
                                                     class="activar">
                                                     @csrf
                                                     @method('POST')
                                                     <button type="submit"
-                                                        class="btn btn-success {{ $area->estado == '1' ? 'disabled' : '' }}"
+                                                        class="btn btn-success {{ $tipo_respuesta->estado == '1' ? 'disabled' : '' }}"
                                                         style="">Habilitar</button>
                                                 </form>
                                             </ul>
@@ -203,8 +203,8 @@
                             <div class="col-md-6 mt-1">
 
                                 <div id="result-info" class="dataTables_info">
-                                    Mostrando {{ $generos->firstItem() }} a {{ $generos->lastItem() }} de
-                                    {{ $generos->total() }} registros
+                                    Mostrando {{ $tipoRespuestas->firstItem() }} a {{ $tipoRespuestas->lastItem() }} de
+                                    {{ $tipoRespuestas->total() }} registros
                                 </div>
 
 
@@ -215,44 +215,44 @@
                             <div class="col-md-6">
                                 <div id="result-pagination" class="dataTables_paginate">
                                     <ul class="pagination justify-content-end">
-                                        <li class="page-item {{ $generos->previousPageUrl() ? '' : 'disabled' }}">
+                                        <li class="page-item {{ $tipoRespuestas->previousPageUrl() ? '' : 'disabled' }}">
                                             <a class="page-link"
-                                                href="{{ $generos->previousPageUrl() }}">Anterior</a>
+                                                href="{{ $tipoRespuestas->previousPageUrl() }}">Anterior</a>
                                         </li>
 
-                                        @if ($generos->currentPage() > 3)
+                                        @if ($tipoRespuestas->currentPage() > 3)
                                             <li class="page-item">
-                                                <a class="page-link" href="{{ $generos->url(1) }}">1</a>
+                                                <a class="page-link" href="{{ $tipoRespuestas->url(1) }}">1</a>
                                             </li>
-                                            @if ($generos->currentPage() > 4)
+                                            @if ($tipoRespuestas->currentPage() > 4)
                                                 <li class="page-item disabled">
                                                     <span class="page-link">...</span>
                                                 </li>
                                             @endif
                                         @endif
 
-                                        @foreach ($generos->getUrlRange(max($generos->currentPage() - 2, 1), min($generos->currentPage() + 2, $generos->lastPage())) as $page => $url)
+                                        @foreach ($tipoRespuestas->getUrlRange(max($tipoRespuestas->currentPage() - 2, 1), min($tipoRespuestas->currentPage() + 2, $tipoRespuestas->lastPage())) as $page => $url)
                                             <li
-                                                class="page-item {{ $page == $generos->currentPage() ? 'active' : '' }}">
+                                                class="page-item {{ $page == $tipoRespuestas->currentPage() ? 'active' : '' }}">
                                                 <a class="page-link" href="{{ $url }}">{{ $page }}</a>
                                             </li>
                                         @endforeach
 
-                                        @if ($generos->currentPage() < $generos->lastPage() - 2)
-                                            @if ($generos->currentPage() < $generos->lastPage() - 3)
+                                        @if ($tipoRespuestas->currentPage() < $tipoRespuestas->lastPage() - 2)
+                                            @if ($tipoRespuestas->currentPage() < $tipoRespuestas->lastPage() - 3)
                                                 <li class="page-item disabled">
                                                     <span class="page-link">...</span>
                                                 </li>
                                             @endif
                                             <li class="page-item">
                                                 <a class="page-link"
-                                                    href="{{ $generos->url($generos->lastPage()) }}">{{ $generos->lastPage() }}</a>
+                                                    href="{{ $tipoRespuestas->url($tipoRespuestas->lastPage()) }}">{{ $tipoRespuestas->lastPage() }}</a>
                                             </li>
                                         @endif
 
-                                        <li class="page-item {{ $generos->nextPageUrl() ? '' : 'disabled' }}">
+                                        <li class="page-item {{ $tipoRespuestas->nextPageUrl() ? '' : 'disabled' }}">
                                             <a class="page-link"
-                                                href="{{ $generos->nextPageUrl() }}">Siguiente</a>
+                                                href="{{ $tipoRespuestas->nextPageUrl() }}">Siguiente</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -274,12 +274,12 @@
                     </div>
                     <div class="modal-body pb-5 px-sm-5 pt-50">
                         <div class="text-center mb-2">
-                            <h1 class="mb-1">Registrar generos</h1>
+                            <h1 class="mb-1">Registrar Tipo Respuesta</h1>
                             <p></p>
                         </div>
 
 
-                        <form id="editAddForm" class="row gy-1 pt-75 formguardar" action="{{ route('generos.store') }}"
+                        <form id="editAddForm" class="row gy-1 pt-75 formguardar" action="{{ route('tipo-respuestas.store') }}"
                             method="POST">
 
                             @csrf
@@ -314,7 +314,7 @@
         </div>
 
 
-        @include('generos.modal')
+        @include('tipo-respuestas.modal')
 
 
 
@@ -342,7 +342,7 @@
                 $('#edit_descripcion').val(descripcion)
 
                 $('#editEvent').modal('show');
-                var actionUrl = "{{ route('generos.update', ':id') }}";
+                var actionUrl = "{{ route('tipo-respuestas.update', ':id') }}";
                 actionUrl = actionUrl.replace(':id', id);
                 $('#editActividad').attr('action', actionUrl);
 

@@ -1,10 +1,13 @@
 <?php
 
 use App\Http\Controllers\AreaController;
+use App\Http\Controllers\DimensionController;
 use App\Http\Controllers\EmpresaController;
+use App\Http\Controllers\EncuestaController;
 use App\Http\Controllers\GeneroController;
 use App\Http\Controllers\MenuPrincipalController;
 use App\Http\Controllers\PreguntaController;
+use App\Http\Controllers\TipoRespuestaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -43,3 +46,10 @@ Route::resource('empresa', EmpresaController::class)->names('empresa');
 Route::resource('pregunta', PreguntaController::class)->names('pregunta');
 Route::get('encuesta', [EncuestaController::class, 'index'])->name('encuesta.index');
 Route::post('encuesta/enviar_respuestas', [EncuestaController::class, 'store'])->name('encuesta.store');
+
+
+Route::post('tipo-respuestas/{tipo_respuesta}/activar', [TipoRespuestaController::class, 'activar'])->name('tipo-respuestas.activar');
+Route::resource('tipo-respuestas', TipoRespuestaController::class)->names('tipo-respuestas');
+
+Route::post('dimensiones/{dimensione}/activar', [DimensionController::class, 'activar'])->name('dimensiones.activar');
+Route::resource('dimensiones', DimensionController::class)->names('dimensiones');

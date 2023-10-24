@@ -50,6 +50,7 @@ class AreaController extends Controller
 
         ]);
         return redirect()->route('areas.index')->with('guardar', 'ok');
+    
     }
 
     /**
@@ -85,6 +86,7 @@ class AreaController extends Controller
         ]]);
 
         return redirect()->route('areas.index')->with('actualizar', 'ok');
+   
     }
 
     /**

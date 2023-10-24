@@ -6,13 +6,13 @@
             </div>
             <div class="modal-body pb-5 px-sm-5 pt-50">
                 <div class="text-center mb-2">
-                    <h1 class="mb-1">Editar Area</h1>
+                    <h1 class="mb-1">Editar Dimensión</h1>
                     <p></p>
                 </div>
 
 
                 <form id="editActividad" class="row gy-1 pt-75 formactualizar"
-                    action="{{ route('generos.update', 2) }}" method="POST">
+                    action="{{ route('dimensiones.update', 2) }}" method="POST">
                     @csrf
                     @method('PUT')
                     <div class="col-md-12">
