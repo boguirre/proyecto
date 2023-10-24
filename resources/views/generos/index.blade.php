@@ -197,14 +197,14 @@
 
                             </tbody>
                         </table>
-                        {{-- 
+                        
                         <div class="row">
 
                             <div class="col-md-6 mt-1">
 
                                 <div id="result-info" class="dataTables_info">
-                                    Mostrando {{ $tipoActividads->firstItem() }} a {{ $tipoActividads->lastItem() }} de
-                                    {{ $tipoActividads->total() }} registros
+                                    Mostrando {{ $generos->firstItem() }} a {{ $generos->lastItem() }} de
+                                    {{ $generos->total() }} registros
                                 </div>
 
 
@@ -215,51 +215,51 @@
                             <div class="col-md-6">
                                 <div id="result-pagination" class="dataTables_paginate">
                                     <ul class="pagination justify-content-end">
-                                        <li class="page-item {{ $tipoActividads->previousPageUrl() ? '' : 'disabled' }}">
+                                        <li class="page-item {{ $generos->previousPageUrl() ? '' : 'disabled' }}">
                                             <a class="page-link"
-                                                href="{{ $tipoActividads->previousPageUrl() }}">Anterior</a>
+                                                href="{{ $generos->previousPageUrl() }}">Anterior</a>
                                         </li>
 
-                                        @if ($tipoActividads->currentPage() > 3)
+                                        @if ($generos->currentPage() > 3)
                                             <li class="page-item">
-                                                <a class="page-link" href="{{ $tipoActividads->url(1) }}">1</a>
+                                                <a class="page-link" href="{{ $generos->url(1) }}">1</a>
                                             </li>
-                                            @if ($tipoActividads->currentPage() > 4)
+                                            @if ($generos->currentPage() > 4)
                                                 <li class="page-item disabled">
                                                     <span class="page-link">...</span>
                                                 </li>
                                             @endif
                                         @endif
 
-                                        @foreach ($tipoActividads->getUrlRange(max($tipoActividads->currentPage() - 2, 1), min($tipoActividads->currentPage() + 2, $tipoActividads->lastPage())) as $page => $url)
+                                        @foreach ($generos->getUrlRange(max($generos->currentPage() - 2, 1), min($generos->currentPage() + 2, $generos->lastPage())) as $page => $url)
                                             <li
-                                                class="page-item {{ $page == $tipoActividads->currentPage() ? 'active' : '' }}">
+                                                class="page-item {{ $page == $generos->currentPage() ? 'active' : '' }}">
                                                 <a class="page-link" href="{{ $url }}">{{ $page }}</a>
                                             </li>
                                         @endforeach
 
-                                        @if ($tipoActividads->currentPage() < $tipoActividads->lastPage() - 2)
-                                            @if ($tipoActividads->currentPage() < $tipoActividads->lastPage() - 3)
+                                        @if ($generos->currentPage() < $generos->lastPage() - 2)
+                                            @if ($generos->currentPage() < $generos->lastPage() - 3)
                                                 <li class="page-item disabled">
                                                     <span class="page-link">...</span>
                                                 </li>
                                             @endif
                                             <li class="page-item">
                                                 <a class="page-link"
-                                                    href="{{ $tipoActividads->url($tipoActividads->lastPage()) }}">{{ $tipoActividads->lastPage() }}</a>
+                                                    href="{{ $generos->url($generos->lastPage()) }}">{{ $generos->lastPage() }}</a>
                                             </li>
                                         @endif
 
-                                        <li class="page-item {{ $tipoActividads->nextPageUrl() ? '' : 'disabled' }}">
+                                        <li class="page-item {{ $generos->nextPageUrl() ? '' : 'disabled' }}">
                                             <a class="page-link"
-                                                href="{{ $tipoActividads->nextPageUrl() }}">Siguiente</a>
+                                                href="{{ $generos->nextPageUrl() }}">Siguiente</a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
 
 
-                        </div> --}}
+                        </div>
 
                     </div>
                 </div>

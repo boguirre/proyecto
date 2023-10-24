@@ -10,9 +10,19 @@ class GeneroController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $generos = Genero::get();
+        // $generos = Genero::get();
+
+
+        $query = Genero::query();
+        if ($request->has('search')) {
+            $searchTerm = $request->input('search');
+            $query->where('descripcion', 'LIKE', "%$searchTerm%");
+        }
+        $generos = $query->paginate(5);
+        $generos->appends(['search' => $request->input('search')]);
+
         return view('generos.index', compact('generos'));
     }
 
