@@ -34,7 +34,9 @@ Route::middleware([
 
 
 Route::get('menu-principal',[MenuPrincipalController::class,'index'])->name('menu-principal.index');
+Route::post('areas/{area}/activar', [AreaController::class, 'activar'])->name('areas.activar');
 Route::resource('areas', AreaController::class)->names('areas');
+Route::post('generos/{genero}/activar', [GeneroController::class, 'activar'])->name('generos.activar');
 Route::resource('generos', GeneroController::class)->names('generos');
 
 Route::resource('empresa', EmpresaController::class)->names('empresa');
