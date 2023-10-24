@@ -139,7 +139,7 @@
         <li class="nav-item {{ Request::is('areas') | Request::is('areas/*') ? 'active' : '' }}">
 
 
-            <a class="d-flex align-items-center" href="{{route('areas.index')}}">
+            <a class="d-flex align-items-center" href="{{ route('areas.index') }}">
 
                 {{-- <i data-feather="check-square"></i> --}}
                 <i data-feather='layers'></i>
@@ -147,18 +147,16 @@
         </li>
 
         <li class="nav-item {{ Request::is('generos') | Request::is('generose/*') ? 'active' : '' }}"><a
-                class="d-flex align-items-center" href="{{route('generos.index')}}">
+                class="d-flex align-items-center" href="{{ route('generos.index') }}">
                 {{-- <i data-feather="check-square"></i> --}}
                 <i data-feather='users'></i>
-                
-                <span
-                    class="menu-title text-truncate" data-i18n="Todo">Géneros</span></a>
+
+                <span class="menu-title text-truncate" data-i18n="Todo">Géneros</span></a>
         </li>
         <li class=" nav-item"><a class="d-flex align-items-center" href="#">
-            {{-- <i data-feather="file-text"></i> --}}
-            <i data-feather='sliders'></i>
-            <span
-                    class="menu-title text-truncate" data-i18n="Invoice">Rangos</span></a>
+                {{-- <i data-feather="file-text"></i> --}}
+                <i data-feather='sliders'></i>
+                <span class="menu-title text-truncate" data-i18n="Invoice">Rangos</span></a>
             <ul class="menu-content">
                 <li><a class="d-flex align-items-center" href="app-invoice-list.html"><i data-feather="circle"></i><span
                             class="menu-item text-truncate" data-i18n="List">Edad</span></a>
@@ -173,10 +171,14 @@
         <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="file-text"></i><span
                     class="menu-title text-truncate" data-i18n="Invoice">Encuesta</span></a>
             <ul class="menu-content">
-                <li class="nav-item {{ Request::is('tipo-respuestas') | Request::is('tipo-respuestas/*') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('tipo-respuestas.index')}}"><i data-feather="circle"></i><span
-                            class="menu-item text-truncate" data-i18n="List">Tipos De Respuesta</span></a>
+                <li
+                    class="nav-item {{ Request::is('tipo-respuestas') | Request::is('tipo-respuestas/*') ? 'active' : '' }}">
+                    <a class="d-flex align-items-center" href="{{ route('tipo-respuestas.index') }}"><i
+                            data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Tipos De
+                            Respuesta</span></a>
                 </li>
-                <li class="nav-item {{ Request::is('dimensiones') | Request::is('dimensiones/*') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('dimensiones.index')}}"><i
+                <li class="nav-item {{ Request::is('dimensiones') | Request::is('dimensiones/*') ? 'active' : '' }}"><a
+                        class="d-flex align-items-center" href="{{ route('dimensiones.index') }}"><i
                             data-feather="circle"></i><span class="menu-item text-truncate"
                             data-i18n="Preview">Dimensiones</span></a>
                 </li>
@@ -185,6 +187,10 @@
                 </li>
                 <li><a class="d-flex align-items-center" href="app-invoice-add.html"><i data-feather="circle"></i><span
                             class="menu-item text-truncate" data-i18n="Add">Respuestas</span></a>
+                </li>
+
+                <li class="nav-item {{ Request::is('preguntas') | Request::is('pregunta/*') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('pregunta.index')}}"><i data-feather="circle"></i><span
+                            class="menu-item text-truncate" data-i18n="Add">Preguntas</span></a>
                 </li>
             </ul>
         </li>

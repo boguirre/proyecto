@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('preguntas', function (Blueprint $table) {
             $table->id();
             $table->string('descripcion')->nullable();
+            $table->integer('cod_num_preg')->nullable();
+            $table->string('estado')->default(1);
             $table->unsignedBigInteger('sub_dimension_id');
             $table->foreign('sub_dimension_id')->references('id')->on('sub_dimensions');
             $table->unsignedBigInteger('tipo_r_01_id')->default(1);

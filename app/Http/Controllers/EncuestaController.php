@@ -11,7 +11,9 @@ class EncuestaController extends Controller
 {
     public function index()
     {
-        $preguntas = Pregunta::all();
+        $preguntas = Pregunta::where('estado', 1)
+        ->orderBy('cod_num_preg', 'asc')
+        ->get();
         $generos = Genero::all();
         $areas = Area::all();
 
