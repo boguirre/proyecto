@@ -128,29 +128,29 @@
                             </thead>
                             <tbody id="result-table">
 
-                                @foreach ($generos as $genero)
+                                @foreach ($areas as $area)
                                     <tr>
                                         <td>
                                             <a href="#" class="btn btn-primary btn-sm">
-                                                {{ $genero->id }}
+                                                {{ $area->id }}
                                             </a>
 
 
                                         </td>
 
                                         <td>
-                                            {{ $genero->descripcion ?? 'No existe descripción.....' }}
+                                            {{ $area->descripcion ?? 'No existe descripción.....' }}
                                         </td>
                                         <td>
-                                            <button class="btn {{ $genero->estado == '1' ? 'btn-success' : 'btn-danger' }}">
-                                                {{ $genero->estado == '1' ? 'Habilitado' : 'Deshabilitado' }}
+                                            <button class="btn {{ $area->estado == '1' ? 'btn-success' : 'btn-danger' }}">
+                                                {{ $area->estado == '1' ? 'Habilitado' : 'Deshabilitado' }}
 
                                             </button>
                                         </td>
 
                                         <td>
 
-                                            <form action="{{ route('generos.destroy', $genero) }}" method="POST"
+                                            <form action="{{ route('areas.destroy', $area) }}" method="POST"
                                                 class="desactivar">
                                                 @csrf
                                                 @method('DELETE')
@@ -158,15 +158,15 @@
 
                                                 <a href="#" class="btn btn-primary dt-button create-new"
                                                     data-bs-toggle="modal" data-bs-target="#editEvent"
-                                                    data-id="{{ $genero->id }}" {{-- data-nombre="{{ $genero->nombre }}" --}}
-                                                    data-descripcion="{{ $genero->descripcion }}">
+                                                    data-id="{{ $area->id }}" {{-- data-nombre="{{ $area->nombre }}" --}}
+                                                    data-descripcion="{{ $area->descripcion }}">
                                                     <i data-feather='edit'></i>
 
                                                 </a>
 
-                                                {{-- @can('generos.destroy') --}}
+                                                {{-- @can('areas.destroy') --}}
                                                 <button type="submit"
-                                                    class="btn btn-danger {{ $genero->estado == '2' ? 'disabled' : '' }}">
+                                                    class="btn btn-danger {{ $area->estado == '2' ? 'disabled' : '' }}">
                                                     <i data-feather='trash-2'></i>
                                                 </button>
                                                 {{-- @endcan --}}
@@ -175,15 +175,15 @@
 
 
                                         </td>
-                                        {{-- @can('generos.destroy') --}}
+                                        {{-- @can('areas.destroy') --}}
                                         <td class="text-center">
                                             <ul class="table-controls">
-                                                <form action="{{ route('generos.activar', $genero) }}" method="POST"
+                                                <form action="{{ route('areas.activar', $area) }}" method="POST"
                                                     class="activar">
                                                     @csrf
                                                     @method('POST')
                                                     <button type="submit"
-                                                        class="btn btn-success {{ $genero->estado == '1' ? 'disabled' : '' }}"
+                                                        class="btn btn-success {{ $area->estado == '1' ? 'disabled' : '' }}"
                                                         style="">Habilitar</button>
                                                 </form>
                                             </ul>
