@@ -12,7 +12,8 @@ class AreaController extends Controller
      */
     public function index()
     {
-        //
+        $areas = Area::get();
+        return view('areas.index', compact('areas'));
     }
 
     /**

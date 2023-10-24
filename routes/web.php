@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\AreaController;
 use App\Http\Controllers\EmpresaController;
-use App\Http\Controllers\EncuestaController;
 use App\Http\Controllers\MenuPrincipalController;
 use App\Http\Controllers\PreguntaController;
 use Illuminate\Support\Facades\Route;
@@ -34,7 +33,10 @@ Route::middleware([
 
 
 Route::get('menu-principal',[MenuPrincipalController::class,'index'])->name('menu-principal.index');
+Route::post('areas/{area}/activar', [AreaController::class, 'activar'])->name('areas.activar');
 Route::resource('areas', AreaController::class)->names('areas');
+Route::post('generos/{genero}/activar', [GeneroController::class, 'activar'])->name('generos.activar');
+Route::resource('generos', GeneroController::class)->names('generos');
 
 Route::resource('empresa', EmpresaController::class)->names('empresa');
 Route::resource('pregunta', PreguntaController::class)->names('pregunta');
