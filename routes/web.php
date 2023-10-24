@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\EmpresaController;
 use App\Http\Controllers\MenuPrincipalController;
+use App\Http\Controllers\PreguntaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('pregunta.index');
 });
 
 Route::middleware([
@@ -33,3 +34,4 @@ Route::middleware([
 Route::get('menu-principal',[MenuPrincipalController::class,'index'])->name('menu-principal.index');
 
 Route::resource('empresa', EmpresaController::class)->names('empresa');
+Route::resource('pregunta', PreguntaController::class)->names('pregunta');

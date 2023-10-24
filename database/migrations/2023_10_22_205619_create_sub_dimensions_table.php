@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('dimension_id');
             $table->foreign('dimension_id')->references('id')->on('dimensions');
-
             $table->string('descripcion')->nullable();
             $table->string('estado')->default(1);
             $table->timestamps();

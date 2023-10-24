@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class SubDimension extends Model
 {
     use HasFactory;
+
+    protected $guarded = ['id'];
+
+    public function preguntas()
+    {
+        return $this->hasMany(Pregunta::class);
+    }
 }

@@ -7,28 +7,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="Satisfaction Survey form Wizard by Ansonika." />
     <meta name="author" content="Ansonika" />
-    <title>Satisfyc | Satisfaction Survey form Wizard</title>
+    <title>LISEGA | Encuesta</title>
 
     <!-- Favicons-->
-    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" type="image/x-icon" href="assets/img/apple-touch-icon-57x57-precomposed.png" />
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="assets/img/apple-touch-icon-72x72-precomposed.png" />
+    <link rel="shortcut icon" href="encuesta_assets/img/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" type="image/x-icon"
+        href="encuesta_assets/img/apple-touch-icon-57x57-precomposed.png" />
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72"
+        href="encuesta_assets/img/apple-touch-icon-72x72-precomposed.png" />
     <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114"
-        href="assets/img/apple-touch-icon-114x114-precomposed.png" />
+        href="encuesta_assets/img/apple-touch-icon-114x114-precomposed.png" />
     <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144"
-        href="assets/img/apple-touch-icon-144x144-precomposed.png" />
+        href="encuesta_assets/img/apple-touch-icon-144x144-precomposed.png" />
 
     <!-- GOOGLE WEB FONT -->
     <link href="https://fonts.googleapis.com/css?family=Caveat|Poppins:300,400,500,600,700&display=swap"
         rel="stylesheet" />
 
     <!-- BASE CSS -->
-    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="/assets/css/style.css" rel="stylesheet" />
-    <link href="/assets/css/vendors.css" rel="stylesheet" />
+    <link href="/encuesta_assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/encuesta_assets/css/style.css" rel="stylesheet" />
+    <link href="/encuesta_assets/css/vendors.css" rel="stylesheet" />
 
     <!-- YOUR CUSTOM CSS -->
-    <link href="/assets/css/custom.css" rel="stylesheet" />
+    <link href="/encuesta_assets/css/custom.css" rel="stylesheet" />
 </head>
 
 <body class="style_3">
@@ -46,7 +48,8 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-5">
-                    <a href="index.html"><img src="/assets/img/logo.svg" alt="" width="50" height="55" /></a>
+                    <a href="index.html"><img src="/encuesta_assets/img/logo.svg" alt="" width="50"
+                            height="55" /></a>
                 </div>
                 <div class="col-7">
                     <div id="social">
@@ -91,7 +94,9 @@
                                 <div id="progressbar"></div>
                             </div>
                             <!-- /top-wizard -->
-                            <form id="wrapped" method="POST" autocomplete="off">
+                            <form id="wrapped" action="{{ route('pregunta.store') }}" method="POST"
+                                autocomplete="off">
+                                @csrf
                                 <input id="website" name="website" type="text" value="" />
                                 <!-- Leave for security protection, read docs for details -->
                                 <div id="middle-wizard">
@@ -99,8 +104,8 @@
                                         <div class="col-xl-12 col-lg-12 d-flex align-items-center">
                                             <div class="main_title_1">
                                                 <h3>
-                                                    <img src="assets/img/main_icon_1.svg" width="80" height="80"
-                                                        alt="" />
+                                                    <img src="encuesta_assets/img/main_icon_1.svg" width="80"
+                                                        height="80" alt="" />
                                                     Lisega HR Consulting
                                                 </h3>
                                                 <p style="text-align: center">
@@ -119,41 +124,45 @@
 
                                                 <div class="row">
                                                     <div class="col-md-3 mb-2">
-                                                        <div class="card" style="background-color: gold;">
-                                                            <div class="card-body"
-                                                                style="color: black; font-weight: bold;">
+                                                        <div class="card h-100"
+                                                            style="background-color: gold; border-radius: 50px; display: block; color: black; font-weight: bold">
+                                                            <div class="card-body d-flex flex-column">
                                                                 <i class="icon_check_alt" style="color: green"></i>
-                                                                Alineamiento Estrategico
+                                                                <p class="card-text flex-grow-1">Alineamiento
+                                                                    Estrategico</p>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-3 mb-2">
-                                                        <div class="card" style="background-color: gold;">
-                                                            <div class="card-body"
-                                                                style="color: black; font-weight: bold;">
+                                                        <div class="card h-100"
+                                                            style="background-color: gold; border-radius: 50px; display: block; color: black; font-weight: bold">
+                                                            <div class="card-body d-flex flex-column">
                                                                 <i class="icon_check_alt" style="color: green"></i>
-                                                                Plan de Gestion de Desempeño
+                                                                <p class="card-text flex-grow-1">Plan de Gestion de
+                                                                    Desempeño</p>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-3 mb-2">
-                                                        <div class="card" style="background-color: gold;">
-                                                            <div class="card-body"
-                                                                style="color: black; font-weight: bold;">
+                                                        <div class="card h-100"
+                                                            style="background-color: gold; border-radius: 50px; display: block; color: black; font-weight: bold">
+                                                            <div class="card-body d-flex flex-column">
                                                                 <i class="icon_check_alt" style="color: green"></i>
-                                                                Formalizacion
+                                                                <p class="card-text flex-grow-1">Formalizacion</p>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-3 mb-2">
-                                                        <div class="card" style="background-color: gold;">
-                                                            <div class="card-body"
-                                                                style="color: black; font-weight: bold;">
+                                                        <div class="card h-100"
+                                                            style="background-color: gold; border-radius: 50px; display: block; color: black; font-weight: bold">
+                                                            <div class="card-body d-flex flex-column">
                                                                 <i class="icon_check_alt" style="color: green"></i>
-                                                                Politicas de Gestion
+                                                                <p class="card-text flex-grow-1">Politicas de Gestion
+                                                                </p>
                                                             </div>
                                                         </div>
                                                     </div>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -167,746 +176,142 @@
                                         <div class="form-group">
                                             <label for="telephone">Fecha de Nacimiento</label>
                                             <input type="date" name="telephone" id="telephone"
-                                                class="form-control" />
+                                                class="form-control" required />
                                         </div>
                                         <div class="row">
                                             <div class="col-lg-6 col-md-6 col-6">
                                                 <div class="form-group">
                                                     <label for="age">Fecha de Ingreso</label>
                                                     <input type="date" name="age" id="age"
-                                                        class="form-control" />
+                                                        class="form-control" required />
                                                 </div>
                                             </div>
                                             <div class="col-6">
                                                 <div class="form-group">
                                                     <label for="age">Genero</label>
-                                                    <select name="" id="" class="form-control">
-                                                        <option value="">Masculino</option>
-                                                        <option value="">Femenino</option>
-                                                        <option value="">Otro</option>
-                                                        <option value="">Prefiero no decir</option>
+                                                    <select name="" id="" class="form-control"
+                                                        required>
+
+                                                        @foreach ($generos as $genero)
+                                                            <option value="{{ $genero->id }}">
+                                                                {{ $genero->descripcion }}</option>
+                                                        @endforeach
+
                                                     </select>
                                                 </div>
-                                                <!-- <div class="form-group radio_input">
- <label class="container_radio">Masculino
- <input type="radio" name="gender" value="Male" class="required">
- <span class="checkmark"></span>
- </label>
- <label class="container_radio">Femenino
- <input type="radio" name="gender" value="Female" class="required">
- <span class="checkmark"></span>
- </label>
- </div> -->
                                             </div>
                                         </div>
-                                        <!-- /row -->
-                                        <!-- <div class="form-group terms">
- <label class="container_check">Please accept our <a href="#" data-toggle="modal" data-target="#terms-txt" style="color:#fff; text-decoration: underline;">Terms and conditions</a>
- <input type="checkbox" name="terms" value="Yes" class="required">
- <span class="checkmark"></span>
- </label>
- </div> -->
                                     </div>
                                     <!-- /step Bienvenida-->
 
-                                    <div class="step">
-                                        <div class="col-xl-6 col-lg-6 d-flex align-items-center">
-                                            <div class="main_title_1">
-                                                <h4>
-                                                    <img src="assets/img/main_icon_1.svg" width="80" height="80"
-                                                        alt="" />
-                                                    confianza
-                                                </h4>
-                                                <!-- <p>An mei sadipscing dissentiet, eos ea partem viderer facilisi. Brute nostrud democritum in vis, nam ei erat zril mediocrem. No postea diceret vix.</p>
-            <p><em>- The Satisfyc Team</em></p> -->
+                                    @php
+                                        $ultima_pregunta = $preguntas->last();
+                                        $id = $ultima_pregunta->id;
+                                    @endphp
+
+                                    @foreach ($preguntas as $pregunta)
+                                        <div class="{{ $pregunta->id == $id ? 'submit' : '' }} step">
+                                            <div class="col-xl-12 col-lg-12 d-flex align-items-center">
+                                                <div class="main_title_1">
+                                                    <h4>
+                                                        <img src="encuesta_assets/img/main_icon_1.svg" width="80"
+                                                            height="80" alt="" />
+                                                        {{ $pregunta->sub_dimension->descripcion }}
+                                                    </h4>
+                                                </div>
+                                            </div>
+                                            <h3 class="main_question">
+                                                <strong>1 de 5</strong>{{ $pregunta->descripcion }}
+                                            </h3>
+                                            <div class="review_block">
+                                                <ul>
+                                                    <li>
+                                                        <div class="checkbox_radio_container">
+                                                            <input type="radio"
+                                                                id="r_{{ $pregunta->id }}_{{ $pregunta->tipo_r_05 }}"
+                                                                name="question_1" class="required"
+                                                                value="{{ $pregunta->val_r_05 }}"
+                                                                onchange="getVals(this, 'question_1');" />
+                                                            <label class="radio"
+                                                                for="r_{{ $pregunta->id }}_{{ $pregunta->tipo_r_05 }}"></label>
+                                                            <label
+                                                                for="r_{{ $pregunta->id }}_{{ $pregunta->tipo_r_05 }}"
+                                                                class="wrapper">{{ $pregunta->tipo_r_05->descripcion }}</label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="checkbox_radio_container">
+                                                            <input type="radio"
+                                                                id="r_{{ $pregunta->id }}_{{ $pregunta->tipo_r_04 }}"
+                                                                name="question_1" class="required"
+                                                                value="{{ $pregunta->val_r_04 }}"
+                                                                onchange="getVals(this, 'question_1');" />
+                                                            <label class="radio"
+                                                                for="r_{{ $pregunta->id }}_{{ $pregunta->tipo_r_04 }}"></label>
+                                                            <label
+                                                                for="r_{{ $pregunta->id }}_{{ $pregunta->tipo_r_04 }}"
+                                                                class="wrapper">{{ $pregunta->tipo_r_04->descripcion }}</label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="checkbox_radio_container">
+                                                            <input type="radio"
+                                                                id="r_{{ $pregunta->id }}_{{ $pregunta->tipo_r_03 }}"
+                                                                name="question_1" class="required"
+                                                                value="{{ $pregunta->val_r_03 }}"
+                                                                onchange="getVals(this, 'question_1');" />
+                                                            <label class="radio"
+                                                                for="r_{{ $pregunta->id }}_{{ $pregunta->tipo_r_03 }}"></label>
+                                                            <label
+                                                                for="r_{{ $pregunta->id }}_{{ $pregunta->tipo_r_03 }}"
+                                                                class="wrapper">{{ $pregunta->tipo_r_03->descripcion }}</label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="checkbox_radio_container">
+                                                            <input type="radio"
+                                                                id="r_{{ $pregunta->id }}_{{ $pregunta->tipo_r_02 }}"
+                                                                name="question_1" class="required"
+                                                                value="{{ $pregunta->val_r_04 }}"
+                                                                onchange="getVals(this, 'question_1');" />
+                                                            <label class="radio"
+                                                                for="r_{{ $pregunta->id }}_{{ $pregunta->tipo_r_02 }}"></label>
+                                                            <label
+                                                                for="r_{{ $pregunta->id }}_{{ $pregunta->tipo_r_02 }}"
+                                                                class="wrapper">{{ $pregunta->tipo_r_02->descripcion }}</label>
+                                                        </div>
+                                                    </li>
+
+                                                    <li>
+                                                        <div class="checkbox_radio_container">
+                                                            <input type="radio"
+                                                                id="r_{{ $pregunta->id }}_{{ $pregunta->tipo_r_01 }}"
+                                                                name="question_1" class="required"
+                                                                value="{{ $pregunta->val_r_01 }}"
+                                                                onchange="getVals(this, 'question_1');" />
+                                                            <label class="radio"
+                                                                for="r_{{ $pregunta->id }}_{{ $pregunta->tipo_r_01 }}"></label>
+                                                            <label
+                                                                for="r_{{ $pregunta->id }}_{{ $pregunta->tipo_r_01 }}"
+                                                                class="wrapper">{{ $pregunta->tipo_r_01->descripcion }}</label>
+                                                        </div>
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </div>
-                                        <h3 class="main_question">
-                                            <strong>1 de 5</strong>¿Descripcion de la pregunta?
-                                        </h3>
-                                        <div class="review_block">
-                                            <ul>
-                                                <li>
-                                                    <div class="checkbox_radio_container">
-                                                        <input type="radio" id="no" name="question_1"
-                                                            class="required" value="No"
-                                                            onchange="getVals(this, 'question_1');" />
-                                                        <label class="radio" for="no"></label>
-                                                        <label for="no" class="wrapper">Bueno</label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox_radio_container">
-                                                        <input type="radio" id="maybe" name="question_1"
-                                                            class="required" value="Maybe"
-                                                            onchange="getVals(this, 'question_1');" />
-                                                        <label class="radio" for="maybe"></label>
-                                                        <label for="maybe" class="wrapper">Regular</label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox_radio_container">
-                                                        <input type="radio" id="probably" name="question_1"
-                                                            class="required" value="Probably"
-                                                            onchange="getVals(this, 'question_1');" />
-                                                        <label class="radio" for="probably"></label>
-                                                        <label for="probably" class="wrapper">Malo</label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox_radio_container">
-                                                        <input type="radio" id="sure" name="question_1"
-                                                            class="required" value="Sure"
-                                                            onchange="getVals(this, 'question_1');" />
-                                                        <label class="radio" for="sure"></label>
-                                                        <label for="sure" class="wrapper">Muy Malo</label>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <!-- /review_block-->
-                                        <!-- <div class="form-group">
- <label for="additional_message_2_label">Additional message</label>
- <textarea name="additional_message_2" id="additional_message_2_label" class="form-control" style="height:120px;"
-     onkeyup="getVals(this, 'additional_message_2');"></textarea>
- </div> -->
-                                    </div>
+                                    @endforeach
 
-                                    <div class="step">
+
+
+
+                                    <!-- /step Dimension-->
+
+                                    {{-- <div class="submit step">
                                         <div class="col-xl-6 col-lg-6 d-flex align-items-center">
                                             <div class="main_title_1">
                                                 <h4>
-                                                    <img src="assets/img/main_icon_1.svg" width="80" height="80"
-                                                        alt="" />
-                                                    Confianza
-                                                </h4>
-                                                <!-- <p>An mei sadipscing dissentiet, eos ea partem viderer facilisi. Brute nostrud democritum in vis, nam ei erat zril mediocrem. No postea diceret vix.</p>
-            <p><em>- The Satisfyc Team</em></p> -->
-                                            </div>
-                                        </div>
-                                        <h3 class="main_question mb-4">
-                                            <strong>2 of 5</strong>¿Descripcion de la pregunta?
-                                        </h3>
-                                        <div class="review_block">
-                                            <ul>
-                                                <li>
-                                                    <div class="checkbox_radio_container">
-                                                        <input type="radio" id="nop" name="question_2"
-                                                            class="required" value="No"
-                                                            onchange="getVals(this, 'question_2');" />
-                                                        <label class="radio" for="nop"></label>
-                                                        <label for="nop" class="wrapper">Bueno</label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox_radio_container">
-                                                        <input type="radio" id="bbma" name="question_2"
-                                                            class="required" value="Maybe"
-                                                            onchange="getVals(this, 'question_2');" />
-                                                        <label class="radio" for="bbma"></label>
-                                                        <label for="bbma" class="wrapper">Regular</label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox_radio_container">
-                                                        <input type="radio" id="probably3" name="question_2"
-                                                            class="required" value="Probably"
-                                                            onchange="getVals(this, 'question_2');" />
-                                                        <label class="radio" for="probably3"></label>
-                                                        <label for="probably3" class="wrapper">Malo</label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox_radio_container">
-                                                        <input type="radio" id="sure5" name="question_2"
-                                                            class="required" value="Sure"
-                                                            onchange="getVals(this, 'question_2');" />
-                                                        <label class="radio" for="sure5"></label>
-                                                        <label for="sure5" class="wrapper">Muy Malo</label>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <!-- /review_block-->
-                                        <!-- <div class="form-group">
- <label for="additional_message_2_label">Additional message</label>
- <textarea name="additional_message_2" id="additional_message_2_label" class="form-control" style="height:120px;"
-     onkeyup="getVals(this, 'additional_message_2');"></textarea>
- </div> -->
-                                    </div>
-                                    <!-- /step Dimension 1-->
-
-                                    <div class="step">
-                                        <div class="col-xl-6 col-lg-6 d-flex align-items-center">
-                                            <div class="main_title_1">
-                                                <h4>
-                                                    <img src="assets/img/main_icon_1.svg" width="80" height="80"
-                                                        alt="" />
-                                                    respeto
-                                                </h4>
-                                                <!-- <p>An mei sadipscing dissentiet, eos ea partem viderer facilisi. Brute nostrud democritum in vis, nam ei erat zril mediocrem. No postea diceret vix.</p>
-            <p><em>- The Satisfyc Team</em></p> -->
-                                            </div>
-                                        </div>
-                                        <h3 class="main_question mb-4">
-                                            <strong>2 of 5</strong>¿Descripcion de la pregunta?
-                                        </h3>
-                                        <div class="review_block">
-                                            <ul>
-                                                <li>
-                                                    <div class="checkbox_radio_container">
-                                                        <input type="radio" id="no" name="question_2"
-                                                            class="required" value="No"
-                                                            onchange="getVals(this, 'question_2');" />
-                                                        <label class="radio" for="no"></label>
-                                                        <label for="no" class="wrapper">Bueno</label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox_radio_container">
-                                                        <input type="radio" id="maybe" name="question_2"
-                                                            class="required" value="Maybe"
-                                                            onchange="getVals(this, 'question_2');" />
-                                                        <label class="radio" for="maybe"></label>
-                                                        <label for="maybe" class="wrapper">Regular</label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox_radio_container">
-                                                        <input type="radio" id="probably" name="question_2"
-                                                            class="required" value="Probably"
-                                                            onchange="getVals(this, 'question_2');" />
-                                                        <label class="radio" for="probably"></label>
-                                                        <label for="probably" class="wrapper">Malo</label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox_radio_container">
-                                                        <input type="radio" id="sure" name="question_2"
-                                                            class="required" value="Sure"
-                                                            onchange="getVals(this, 'question_2');" />
-                                                        <label class="radio" for="sure"></label>
-                                                        <label for="sure" class="wrapper">Muy Malo</label>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <!-- /review_block-->
-                                        <!-- <div class="form-group">
- <label for="additional_message_2_label">Additional message</label>
- <textarea name="additional_message_2" id="additional_message_2_label" class="form-control" style="height:120px;"
-     onkeyup="getVals(this, 'additional_message_2');"></textarea>
- </div> -->
-                                    </div>
-
-                                    <div class="step">
-                                        <div class="col-xl-6 col-lg-6 d-flex align-items-center">
-                                            <div class="main_title_1">
-                                                <h4>
-                                                    <img src="assets/img/main_icon_1.svg" width="80" height="80"
-                                                        alt="" />
-                                                    respeto
-                                                </h4>
-                                                <!-- <p>An mei sadipscing dissentiet, eos ea partem viderer facilisi. Brute nostrud democritum in vis, nam ei erat zril mediocrem. No postea diceret vix.</p>
-            <p><em>- The Satisfyc Team</em></p> -->
-                                            </div>
-                                        </div>
-                                        <h3 class="main_question mb-4">
-                                            <strong>2 of 5</strong>¿Descripcion de la pregunta?
-                                        </h3>
-                                        <div class="review_block">
-                                            <ul>
-                                                <li>
-                                                    <div class="checkbox_radio_container">
-                                                        <input type="radio" id="no" name="question_2"
-                                                            class="required" value="No"
-                                                            onchange="getVals(this, 'question_2');" />
-                                                        <label class="radio" for="no"></label>
-                                                        <label for="no" class="wrapper">Bueno</label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox_radio_container">
-                                                        <input type="radio" id="maybe" name="question_2"
-                                                            class="required" value="Maybe"
-                                                            onchange="getVals(this, 'question_2');" />
-                                                        <label class="radio" for="maybe"></label>
-                                                        <label for="maybe" class="wrapper">Regular</label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox_radio_container">
-                                                        <input type="radio" id="probably" name="question_2"
-                                                            class="required" value="Probably"
-                                                            onchange="getVals(this, 'question_2');" />
-                                                        <label class="radio" for="probably"></label>
-                                                        <label for="probably" class="wrapper">Malo</label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox_radio_container">
-                                                        <input type="radio" id="sure" name="question_2"
-                                                            class="required" value="Sure"
-                                                            onchange="getVals(this, 'question_2');" />
-                                                        <label class="radio" for="sure"></label>
-                                                        <label for="sure" class="wrapper">Muy Malo</label>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <!-- /review_block-->
-                                        <!-- <div class="form-group">
- <label for="additional_message_2_label">Additional message</label>
- <textarea name="additional_message_2" id="additional_message_2_label" class="form-control" style="height:120px;"
-     onkeyup="getVals(this, 'additional_message_2');"></textarea>
- </div> -->
-                                    </div>
-                                    <!-- /step Dimension 2-->
-
-                                    <div class="step">
-                                        <div class="col-xl-6 col-lg-6 d-flex align-items-center">
-                                            <div class="main_title_1">
-                                                <h4>
-                                                    <img src="assets/img/main_icon_1.svg" width="80" height="80"
-                                                        alt="" />
-                                                    equidad
-                                                </h4>
-                                                <!-- <p>An mei sadipscing dissentiet, eos ea partem viderer facilisi. Brute nostrud democritum in vis, nam ei erat zril mediocrem. No postea diceret vix.</p>
-            <p><em>- The Satisfyc Team</em></p> -->
-                                            </div>
-                                        </div>
-                                        <h3 class="main_question mb-4">
-                                            <strong>2 of 5</strong>¿Descripcion de la pregunta?
-                                        </h3>
-                                        <div class="review_block">
-                                            <ul>
-                                                <li>
-                                                    <div class="checkbox_radio_container">
-                                                        <input type="radio" id="no" name="question_2"
-                                                            class="required" value="No"
-                                                            onchange="getVals(this, 'question_2');" />
-                                                        <label class="radio" for="no"></label>
-                                                        <label for="no" class="wrapper">Bueno</label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox_radio_container">
-                                                        <input type="radio" id="maybe" name="question_2"
-                                                            class="required" value="Maybe"
-                                                            onchange="getVals(this, 'question_2');" />
-                                                        <label class="radio" for="maybe"></label>
-                                                        <label for="maybe" class="wrapper">Regular</label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox_radio_container">
-                                                        <input type="radio" id="probably" name="question_2"
-                                                            class="required" value="Probably"
-                                                            onchange="getVals(this, 'question_2');" />
-                                                        <label class="radio" for="probably"></label>
-                                                        <label for="probably" class="wrapper">Malo</label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox_radio_container">
-                                                        <input type="radio" id="sure" name="question_2"
-                                                            class="required" value="Sure"
-                                                            onchange="getVals(this, 'question_2');" />
-                                                        <label class="radio" for="sure"></label>
-                                                        <label for="sure" class="wrapper">Muy Malo</label>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <!-- /review_block-->
-                                        <!-- <div class="form-group">
- <label for="additional_message_2_label">Additional message</label>
- <textarea name="additional_message_2" id="additional_message_2_label" class="form-control" style="height:120px;"
-     onkeyup="getVals(this, 'additional_message_2');"></textarea>
- </div> -->
-                                    </div>
-
-                                    <div class="step">
-                                        <div class="col-xl-6 col-lg-6 d-flex align-items-center">
-                                            <div class="main_title_1">
-                                                <h4>
-                                                    <img src="assets/img/main_icon_1.svg" width="80" height="80"
-                                                        alt="" />
-                                                    equidad
-                                                </h4>
-                                                <!-- <p>An mei sadipscing dissentiet, eos ea partem viderer facilisi. Brute nostrud democritum in vis, nam ei erat zril mediocrem. No postea diceret vix.</p>
-            <p><em>- The Satisfyc Team</em></p> -->
-                                            </div>
-                                        </div>
-                                        <h3 class="main_question mb-4">
-                                            <strong>2 of 5</strong>¿Descripcion de la pregunta?
-                                        </h3>
-                                        <div class="review_block">
-                                            <ul>
-                                                <li>
-                                                    <div class="checkbox_radio_container">
-                                                        <input type="radio" id="no" name="question_2"
-                                                            class="required" value="No"
-                                                            onchange="getVals(this, 'question_2');" />
-                                                        <label class="radio" for="no"></label>
-                                                        <label for="no" class="wrapper">Bueno</label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox_radio_container">
-                                                        <input type="radio" id="maybe" name="question_2"
-                                                            class="required" value="Maybe"
-                                                            onchange="getVals(this, 'question_2');" />
-                                                        <label class="radio" for="maybe"></label>
-                                                        <label for="maybe" class="wrapper">Regular</label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox_radio_container">
-                                                        <input type="radio" id="probably" name="question_2"
-                                                            class="required" value="Probably"
-                                                            onchange="getVals(this, 'question_2');" />
-                                                        <label class="radio" for="probably"></label>
-                                                        <label for="probably" class="wrapper">Malo</label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox_radio_container">
-                                                        <input type="radio" id="sure" name="question_2"
-                                                            class="required" value="Sure"
-                                                            onchange="getVals(this, 'question_2');" />
-                                                        <label class="radio" for="sure"></label>
-                                                        <label for="sure" class="wrapper">Muy Malo</label>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <!-- /review_block-->
-                                        <!-- <div class="form-group">
- <label for="additional_message_2_label">Additional message</label>
- <textarea name="additional_message_2" id="additional_message_2_label" class="form-control" style="height:120px;"
-     onkeyup="getVals(this, 'additional_message_2');"></textarea>
- </div> -->
-                                    </div>
-                                    <!-- /step Dimension 3-->
-
-                                    <div class="step">
-                                        <div class="col-xl-6 col-lg-6 d-flex align-items-center">
-                                            <div class="main_title_1">
-                                                <h4>
-                                                    <img src="assets/img/main_icon_1.svg" width="80" height="80"
-                                                        alt="" />
-                                                    orgullo
-                                                </h4>
-                                                <!-- <p>An mei sadipscing dissentiet, eos ea partem viderer facilisi. Brute nostrud democritum in vis, nam ei erat zril mediocrem. No postea diceret vix.</p>
-            <p><em>- The Satisfyc Team</em></p> -->
-                                            </div>
-                                        </div>
-                                        <h3 class="main_question mb-4">
-                                            <strong>2 of 5</strong>¿Descripcion de la pregunta?
-                                        </h3>
-                                        <div class="review_block">
-                                            <ul>
-                                                <li>
-                                                    <div class="checkbox_radio_container">
-                                                        <input type="radio" id="no" name="question_2"
-                                                            class="required" value="No"
-                                                            onchange="getVals(this, 'question_2');" />
-                                                        <label class="radio" for="no"></label>
-                                                        <label for="no" class="wrapper">Bueno</label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox_radio_container">
-                                                        <input type="radio" id="maybe" name="question_2"
-                                                            class="required" value="Maybe"
-                                                            onchange="getVals(this, 'question_2');" />
-                                                        <label class="radio" for="maybe"></label>
-                                                        <label for="maybe" class="wrapper">Regular</label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox_radio_container">
-                                                        <input type="radio" id="probably" name="question_2"
-                                                            class="required" value="Probably"
-                                                            onchange="getVals(this, 'question_2');" />
-                                                        <label class="radio" for="probably"></label>
-                                                        <label for="probably" class="wrapper">Malo</label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox_radio_container">
-                                                        <input type="radio" id="sure" name="question_2"
-                                                            class="required" value="Sure"
-                                                            onchange="getVals(this, 'question_2');" />
-                                                        <label class="radio" for="sure"></label>
-                                                        <label for="sure" class="wrapper">Muy Malo</label>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <!-- /review_block-->
-                                        <!-- <div class="form-group">
- <label for="additional_message_2_label">Additional message</label>
- <textarea name="additional_message_2" id="additional_message_2_label" class="form-control" style="height:120px;"
-     onkeyup="getVals(this, 'additional_message_2');"></textarea>
- </div> -->
-                                    </div>
-
-                                    <div class="step">
-                                        <div class="col-xl-6 col-lg-6 d-flex align-items-center">
-                                            <div class="main_title_1">
-                                                <h4>
-                                                    <img src="assets/img/main_icon_1.svg" width="80" height="80"
-                                                        alt="" />
-                                                    orgullo
-                                                </h4>
-                                                <!-- <p>An mei sadipscing dissentiet, eos ea partem viderer facilisi. Brute nostrud democritum in vis, nam ei erat zril mediocrem. No postea diceret vix.</p>
-            <p><em>- The Satisfyc Team</em></p> -->
-                                            </div>
-                                        </div>
-                                        <h3 class="main_question mb-4">
-                                            <strong>2 of 5</strong>¿Descripcion de la pregunta?
-                                        </h3>
-                                        <div class="review_block">
-                                            <ul>
-                                                <li>
-                                                    <div class="checkbox_radio_container">
-                                                        <input type="radio" id="no" name="question_2"
-                                                            class="required" value="No"
-                                                            onchange="getVals(this, 'question_2');" />
-                                                        <label class="radio" for="no"></label>
-                                                        <label for="no" class="wrapper">Bueno</label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox_radio_container">
-                                                        <input type="radio" id="maybe" name="question_2"
-                                                            class="required" value="Maybe"
-                                                            onchange="getVals(this, 'question_2');" />
-                                                        <label class="radio" for="maybe"></label>
-                                                        <label for="maybe" class="wrapper">Regular</label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox_radio_container">
-                                                        <input type="radio" id="probably" name="question_2"
-                                                            class="required" value="Probably"
-                                                            onchange="getVals(this, 'question_2');" />
-                                                        <label class="radio" for="probably"></label>
-                                                        <label for="probably" class="wrapper">Malo</label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox_radio_container">
-                                                        <input type="radio" id="sure" name="question_2"
-                                                            class="required" value="Sure"
-                                                            onchange="getVals(this, 'question_2');" />
-                                                        <label class="radio" for="sure"></label>
-                                                        <label for="sure" class="wrapper">Muy Malo</label>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <!-- /review_block-->
-                                        <!-- <div class="form-group">
- <label for="additional_message_2_label">Additional message</label>
- <textarea name="additional_message_2" id="additional_message_2_label" class="form-control" style="height:120px;"
-     onkeyup="getVals(this, 'additional_message_2');"></textarea>
- </div> -->
-                                    </div>
-                                    <!-- /step Dimension 4-->
-
-                                    <div class="step">
-                                        <div class="col-xl-6 col-lg-6 d-flex align-items-center">
-                                            <div class="main_title_1">
-                                                <h4>
-                                                    <img src="assets/img/main_icon_1.svg" width="80" height="80"
-                                                        alt="" />
-                                                    cooperacion
-                                                </h4>
-                                                <!-- <p>An mei sadipscing dissentiet, eos ea partem viderer facilisi. Brute nostrud democritum in vis, nam ei erat zril mediocrem. No postea diceret vix.</p>
-            <p><em>- The Satisfyc Team</em></p> -->
-                                            </div>
-                                        </div>
-                                        <h3 class="main_question mb-4">
-                                            <strong>2 of 5</strong>¿Descripcion de la pregunta?
-                                        </h3>
-                                        <div class="review_block">
-                                            <ul>
-                                                <li>
-                                                    <div class="checkbox_radio_container">
-                                                        <input type="radio" id="no" name="question_2"
-                                                            class="required" value="No"
-                                                            onchange="getVals(this, 'question_2');" />
-                                                        <label class="radio" for="no"></label>
-                                                        <label for="no" class="wrapper">Bueno</label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox_radio_container">
-                                                        <input type="radio" id="maybe" name="question_2"
-                                                            class="required" value="Maybe"
-                                                            onchange="getVals(this, 'question_2');" />
-                                                        <label class="radio" for="maybe"></label>
-                                                        <label for="maybe" class="wrapper">Regular</label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox_radio_container">
-                                                        <input type="radio" id="probably" name="question_2"
-                                                            class="required" value="Probably"
-                                                            onchange="getVals(this, 'question_2');" />
-                                                        <label class="radio" for="probably"></label>
-                                                        <label for="probably" class="wrapper">Malo</label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox_radio_container">
-                                                        <input type="radio" id="sure" name="question_2"
-                                                            class="required" value="Sure"
-                                                            onchange="getVals(this, 'question_2');" />
-                                                        <label class="radio" for="sure"></label>
-                                                        <label for="sure" class="wrapper">Muy Malo</label>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <!-- /review_block-->
-                                        <!-- <div class="form-group">
- <label for="additional_message_2_label">Additional message</label>
- <textarea name="additional_message_2" id="additional_message_2_label" class="form-control" style="height:120px;"
-     onkeyup="getVals(this, 'additional_message_2');"></textarea>
- </div> -->
-                                    </div>
-
-                                    <div class="step">
-                                        <div class="col-xl-6 col-lg-6 d-flex align-items-center">
-                                            <div class="main_title_1">
-                                                <h4>
-                                                    <img src="assets/img/main_icon_1.svg" width="80" height="80"
-                                                        alt="" />
-                                                    cooperacion
-                                                </h4>
-                                                <!-- <p>An mei sadipscing dissentiet, eos ea partem viderer facilisi. Brute nostrud democritum in vis, nam ei erat zril mediocrem. No postea diceret vix.</p>
-            <p><em>- The Satisfyc Team</em></p> -->
-                                            </div>
-                                        </div>
-                                        <h3 class="main_question mb-4">
-                                            <strong>2 of 5</strong>¿Descripcion de la pregunta?
-                                        </h3>
-                                        <div class="review_block">
-                                            <ul>
-                                                <li>
-                                                    <div class="checkbox_radio_container">
-                                                        <input type="radio" id="no" name="question_2"
-                                                            class="required" value="No"
-                                                            onchange="getVals(this, 'question_2');" />
-                                                        <label class="radio" for="no"></label>
-                                                        <label for="no" class="wrapper">Bueno</label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox_radio_container">
-                                                        <input type="radio" id="maybe" name="question_2"
-                                                            class="required" value="Maybe"
-                                                            onchange="getVals(this, 'question_2');" />
-                                                        <label class="radio" for="maybe"></label>
-                                                        <label for="maybe" class="wrapper">Regular</label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox_radio_container">
-                                                        <input type="radio" id="probably" name="question_2"
-                                                            class="required" value="Probably"
-                                                            onchange="getVals(this, 'question_2');" />
-                                                        <label class="radio" for="probably"></label>
-                                                        <label for="probably" class="wrapper">Malo</label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox_radio_container">
-                                                        <input type="radio" id="sure" name="question_2"
-                                                            class="required" value="Sure"
-                                                            onchange="getVals(this, 'question_2');" />
-                                                        <label class="radio" for="sure"></label>
-                                                        <label for="sure" class="wrapper">Muy Malo</label>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <!-- /review_block-->
-                                        <!-- <div class="form-group">
- <label for="additional_message_2_label">Additional message</label>
- <textarea name="additional_message_2" id="additional_message_2_label" class="form-control" style="height:120px;"
-     onkeyup="getVals(this, 'additional_message_2');"></textarea>
- </div> -->
-                                    </div>
-                                    <!-- /step Dimension 5-->
-
-                                    <div class="step">
-                                        <div class="col-xl-6 col-lg-6 d-flex align-items-center">
-                                            <div class="main_title_1">
-                                                <h4>
-                                                    <img src="assets/img/main_icon_1.svg" width="80" height="80"
-                                                        alt="" />
-                                                    preguntas corporativas
-                                                </h4>
-                                                <!-- <p>An mei sadipscing dissentiet, eos ea partem viderer facilisi. Brute nostrud democritum in vis, nam ei erat zril mediocrem. No postea diceret vix.</p>
-            <p><em>- The Satisfyc Team</em></p> -->
-                                            </div>
-                                        </div>
-                                        <h3 class="main_question mb-4">
-                                            <strong>2 of 5</strong>¿Descripcion de la pregunta?
-                                        </h3>
-                                        <div class="review_block">
-                                            <ul>
-                                                <li>
-                                                    <div class="checkbox_radio_container">
-                                                        <input type="radio" id="no" name="question_2"
-                                                            class="required" value="No"
-                                                            onchange="getVals(this, 'question_2');" />
-                                                        <label class="radio" for="no"></label>
-                                                        <label for="no" class="wrapper">Bueno</label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox_radio_container">
-                                                        <input type="radio" id="maybe" name="question_2"
-                                                            class="required" value="Maybe"
-                                                            onchange="getVals(this, 'question_2');" />
-                                                        <label class="radio" for="maybe"></label>
-                                                        <label for="maybe" class="wrapper">Regular</label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox_radio_container">
-                                                        <input type="radio" id="probably" name="question_2"
-                                                            class="required" value="Probably"
-                                                            onchange="getVals(this, 'question_2');" />
-                                                        <label class="radio" for="probably"></label>
-                                                        <label for="probably" class="wrapper">Malo</label>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="checkbox_radio_container">
-                                                        <input type="radio" id="sure" name="question_2"
-                                                            class="required" value="Sure"
-                                                            onchange="getVals(this, 'question_2');" />
-                                                        <label class="radio" for="sure"></label>
-                                                        <label for="sure" class="wrapper">Muy Malo</label>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <div class="submit step">
-                                        <div class="col-xl-6 col-lg-6 d-flex align-items-center">
-                                            <div class="main_title_1">
-                                                <h4>
-                                                    <img src="assets/img/main_icon_1.svg" width="80" height="80"
-                                                        alt="" />
+                                                    <img src="encuesta_assets/img/main_icon_1.svg" width="80"
+                                                        height="80" alt="" />
                                                     preguntas corporativas
                                                 </h4>
                                             </div>
@@ -954,84 +359,9 @@
                                                 </li>
                                             </ul>
                                         </div>
-                                        <!-- /review_block-->
-                                        <!-- <div class="form-group">
- <label for="additional_message_2_label">Additional message</label>
- <textarea name="additional_message_2" id="additional_message_2_label" class="form-control" style="height:120px;"
-     onkeyup="getVals(this, 'additional_message_2');"></textarea>
- </div> -->
-                                    </div>
+                                    </div> --}}
                                     <!-- /step Dimension 6-->
 
-                                    <!-- <div class="step">
- <h3 class="main_question"><strong>3 of 5</strong>How did you hear about us?</h3>
- <div class="review_block">
- <ul>
- <li>
- <div class="checkbox_radio_container">
- <input type="checkbox" id="question_3_opt_1" name="question_3[]" class="required" value="Google and Search Engines" onchange="getVals(this, 'question_3');">
- <label class="checkbox" for="question_3_opt_1"></label>
- <label for="question_3_opt_1" class="wrapper">Google and Search Engines</label>
- </div>
- </li>
- <li>
- <div class="checkbox_radio_container">
- <input type="checkbox" id="question_3_opt_2" name="question_3[]" class="required" value="Emails or Newsletter" onchange="getVals(this, 'question_3');">
- <label class="checkbox" for="question_3_opt_2"></label>
- <label for="question_3_opt_2" class="wrapper">Emails or Newsletter</label>
- </div>
- </li>
- <li>
- <div class="checkbox_radio_container">
- <input type="checkbox" id="question_3_opt_3" name="question_3[]" class="required" value="Friends or other people" onchange="getVals(this, 'question_3');">
- <label class="checkbox" for="question_3_opt_3"></label>
- <label for="question_3_opt_3" class="wrapper">Friends or other people</label>
- </div>
- </li>
- <li>
- <div class="checkbox_radio_container">
- <input type="checkbox" id="question_3_opt_4" name="question_3[]" class="required" value="Print Advertising" onchange="getVals(this, 'question_3');">
- <label class="checkbox" for="question_3_opt_4"></label>
- <label for="question_3_opt_4" class="wrapper">Print Advertising</label>
- </div>
- </li>
- <li>
- <div class="checkbox_radio_container">
- <input type="checkbox" id="question_3_opt_5" name="question_3[]" class="required" value="Print Advertising" onchange="getVals(this, 'question_3');">
- <label class="checkbox" for="question_3_opt_5"></label>
- <label for="question_3_opt_5" class="wrapper">Other</label>
- </div>
- </li>
- </ul>
- <small><em>Multiple selections *</em></small>
- </div>
- </div> -->
-                                    <!-- /step 3-->
-
-                                    <!-- <div class="step">
- <h3 class="main_question"><strong>4 of 5</strong>Summary</h3>
- <div class="summary">
- <ul>
- <li>
- <strong>1</strong>
- <h5>How was the service provided?</h5>
- <p id="question_1" class="mb-2"></p>
- <p id="additional_message"></p>
- </li>
- <li>
- <strong>2</strong>
- <h5>¿Descripcion de la pregunta?</h5>
- <p id="question_2" class="mb-2"></p>
- <p id="additional_message_2"></p>
- </li>
- <li>
- <strong>3</strong>
- <h5>How did you hear about our company?</h5>
- <p id="question_3"></p>
- </li>
- </ul>
- </div>
- </div> -->
                                     <!-- /step 4-->
 
                                     <!-- /step 5-->
@@ -1131,12 +461,12 @@
     <!-- /.modal -->
 
     <!-- COMMON SCRIPTS -->
-    <script src="/assets/js/jquery-3.2.1.min.js"></script>
-    <script src="/assets/js/common_scripts.min.js"></script>
-    <script src="/assets/js/functions.js"></script>
+    <script src="/encuesta_assets/js/jquery-3.2.1.min.js"></script>
+    <script src="/encuesta_assets/js/common_scripts.min.js"></script>
+    <script src="/encuesta_assets/js/functions.js"></script>
 
     <!-- Wizard script -->
-    <script src="/assets/js/survey_func.js"></script>
+    <script src="/encuesta_assets/js/survey_func.js"></script>
 </body>
 
 </html>

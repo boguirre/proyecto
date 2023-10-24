@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\Pregunta;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -28,7 +30,8 @@ class DatabaseSeeder extends Seeder
             RangoEdadSeeder::class,
             TipoRespuestaSeeder::class,
             DimensionSeeder::class,
-            SubDimensionSeeder::class
+            SubDimensionSeeder::class,
+            PreguntaSeeder::class
         ]);
     }
 }
