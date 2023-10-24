@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AreaController;
 use App\Http\Controllers\EmpresaController;
+use App\Http\Controllers\GeneroController;
 use App\Http\Controllers\MenuPrincipalController;
 use App\Http\Controllers\PreguntaController;
 use Illuminate\Support\Facades\Route;
@@ -34,6 +35,7 @@ Route::middleware([
 
 Route::get('menu-principal',[MenuPrincipalController::class,'index'])->name('menu-principal.index');
 Route::resource('areas', AreaController::class)->names('areas');
+Route::resource('generos', GeneroController::class)->names('generos');
 
 Route::resource('empresa', EmpresaController::class)->names('empresa');
 Route::resource('pregunta', PreguntaController::class)->names('pregunta');

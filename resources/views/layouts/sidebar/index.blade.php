@@ -136,18 +136,18 @@
         </li>
 
 
-        <li class="nav-item {{ Request::is('vaso-leche') | Request::is('vaso-leche/*') ? 'active' : '' }}">
+        <li class="nav-item {{ Request::is('areas') | Request::is('areas/*') ? 'active' : '' }}">
 
 
-            <a class="d-flex align-items-center" href="">
+            <a class="d-flex align-items-center" href="{{route('areas.index')}}">
 
                 {{-- <i data-feather="check-square"></i> --}}
                 <i data-feather='layers'></i>
                 <span class="menu-title text-truncate" data-i18n="Todo">Areas</span></a>
         </li>
 
-        <li class="nav-item {{ Request::is('vaso-leche') | Request::is('vaso-leche/*') ? 'active' : '' }}"><a
-                class="d-flex align-items-center" href="{{route('areas.index')}}">
+        <li class="nav-item {{ Request::is('generos') | Request::is('generose/*') ? 'active' : '' }}"><a
+                class="d-flex align-items-center" href="{{route('generos.index')}}">
                 {{-- <i data-feather="check-square"></i> --}}
                 <i data-feather='users'></i>
                 
