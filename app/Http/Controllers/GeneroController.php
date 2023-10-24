@@ -12,7 +12,8 @@ class GeneroController extends Controller
      */
     public function index()
     {
-        //
+        $generos = Genero::get();
+        return view('generos.index', compact('generos'));
     }
 
     /**
@@ -28,7 +29,17 @@ class GeneroController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'descripcion' => 'required',
+        ], [
+            'descripcion.required' => 'Ingrese el nombre de la cobertura.',
+        ]);
+        Genero::create($request->all() + [
+
+            // 'user_id' => Auth::user()->id
+
+        ]);
+        return redirect()->route('generos.index')->with('guardar', 'ok');
     }
 
     /**
@@ -52,7 +63,18 @@ class GeneroController extends Controller
      */
     public function update(Request $request, Genero $genero)
     {
-        //
+        $request->validate([
+            'edit_descripcion' => 'required',
+        ], [
+            'edit_descripcion.required' => 'Ingrese el nombre de la cobertura.',
+        ]);
+
+        $genero->update([[
+            // $zona_embarque->nombre = $request->edit_nombre,
+            $genero->descripcion = $request->edit_descripcion,
+        ]]);
+
+        return redirect()->route('generos.index')->with('actualizar', 'ok');
     }
 
     /**
@@ -60,6 +82,16 @@ class GeneroController extends Controller
      */
     public function destroy(Genero $genero)
     {
-        //
+        $genero->estado = 2;
+        $genero->save();
+
+        return redirect()->route('generos.index')->with('desactivar', 'ok');
+    }
+
+    public function activar(Genero $genero)
+    {
+        $genero->estado = 1;
+        $genero->save();
+        return redirect()->route('generos.index')->with('activar', 'ok');
     }
 }

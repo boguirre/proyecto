@@ -4,12 +4,12 @@
     <div class="content-header-left col-md-9 col-12 mb-2">
         <div class="row breadcrumbs-top">
             <div class="col-12">
-                <h2 class="content-header-title float-start mb-0">Lista de Areas</h2>
+                <h2 class="content-header-title float-start mb-0">Lista de Géneros</h2>
                 <div class="breadcrumb-wrapper">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="">Menu Principal</a>
                         </li>
-                        <li class="breadcrumb-item"><a href="{{ route('areas.index') }}">Areas</a>
+                        <li class="breadcrumb-item"><a href="{{ route('generos.index') }}">Géneros</a>
                         </li>
                         <li class="breadcrumb-item active">Lista
                         </li>
@@ -70,7 +70,7 @@
                 <div class="card">
                     <div class="card-header border-bottom p-1">
                         <div class="head-label">
-                            <h6 class="mb-0">Lista de Areas</h6>
+                            <h6 class="mb-0">Lista de Géneros</h6>
                         </div>
                         <div class="dt-action-buttons text-end">
                             <div class="dt-buttons d-inline-flex">
@@ -99,7 +99,7 @@
                                         <line x1="5" y1="12" x2="19" y2="12">
                                         </line>
                                     </svg>
-                                    <span class="align-middle">Registrar De Areas</span>
+                                    <span class="align-middle">Registrar De Géneros</span>
                                 </button>
                             </div>
 
@@ -111,7 +111,7 @@
                         <form id="search-form" class="mb-3">
                             <div class="input-group">
                                 <input type="text" name="search" id="search-input" class="form-control"
-                                    placeholder="Buscar por descripción de area">
+                                    placeholder="Buscar por descripción de género">
                                 <button type="submit" class="btn btn-primary">Buscar</button>
                             </div>
                         </form>
@@ -128,29 +128,29 @@
                             </thead>
                             <tbody id="result-table">
 
-                                @foreach ($generos as $genero)
+                                @foreach ($generos as $area)
                                     <tr>
                                         <td>
                                             <a href="#" class="btn btn-primary btn-sm">
-                                                {{ $genero->id }}
+                                                {{ $area->id }}
                                             </a>
 
 
                                         </td>
 
                                         <td>
-                                            {{ $genero->descripcion ?? 'No existe descripción.....' }}
+                                            {{ $area->descripcion ?? 'No existe descripción.....' }}
                                         </td>
                                         <td>
-                                            <button class="btn {{ $genero->estado == '1' ? 'btn-success' : 'btn-danger' }}">
-                                                {{ $genero->estado == '1' ? 'Habilitado' : 'Deshabilitado' }}
+                                            <button class="btn {{ $area->estado == '1' ? 'btn-success' : 'btn-danger' }}">
+                                                {{ $area->estado == '1' ? 'Habilitado' : 'Deshabilitado' }}
 
                                             </button>
                                         </td>
 
                                         <td>
 
-                                            <form action="{{ route('generos.destroy', $genero) }}" method="POST"
+                                            <form action="{{ route('generos.destroy', $area) }}" method="POST"
                                                 class="desactivar">
                                                 @csrf
                                                 @method('DELETE')
@@ -158,15 +158,15 @@
 
                                                 <a href="#" class="btn btn-primary dt-button create-new"
                                                     data-bs-toggle="modal" data-bs-target="#editEvent"
-                                                    data-id="{{ $genero->id }}" {{-- data-nombre="{{ $genero->nombre }}" --}}
-                                                    data-descripcion="{{ $genero->descripcion }}">
+                                                    data-id="{{ $area->id }}" {{-- data-nombre="{{ $area->nombre }}" --}}
+                                                    data-descripcion="{{ $area->descripcion }}">
                                                     <i data-feather='edit'></i>
 
                                                 </a>
 
                                                 {{-- @can('generos.destroy') --}}
                                                 <button type="submit"
-                                                    class="btn btn-danger {{ $genero->estado == '2' ? 'disabled' : '' }}">
+                                                    class="btn btn-danger {{ $area->estado == '2' ? 'disabled' : '' }}">
                                                     <i data-feather='trash-2'></i>
                                                 </button>
                                                 {{-- @endcan --}}
@@ -178,12 +178,12 @@
                                         {{-- @can('generos.destroy') --}}
                                         <td class="text-center">
                                             <ul class="table-controls">
-                                                <form action="{{ route('generos.activar', $genero) }}" method="POST"
+                                                <form action="{{ route('generos.activar', $area) }}" method="POST"
                                                     class="activar">
                                                     @csrf
                                                     @method('POST')
                                                     <button type="submit"
-                                                        class="btn btn-success {{ $genero->estado == '1' ? 'disabled' : '' }}"
+                                                        class="btn btn-success {{ $area->estado == '1' ? 'disabled' : '' }}"
                                                         style="">Habilitar</button>
                                                 </form>
                                             </ul>
@@ -274,12 +274,12 @@
                     </div>
                     <div class="modal-body pb-5 px-sm-5 pt-50">
                         <div class="text-center mb-2">
-                            <h1 class="mb-1">Registrar Areas</h1>
+                            <h1 class="mb-1">Registrar generos</h1>
                             <p></p>
                         </div>
 
 
-                        <form id="editAddForm" class="row gy-1 pt-75 formguardar" action="{{ route('areas.store') }}"
+                        <form id="editAddForm" class="row gy-1 pt-75 formguardar" action="{{ route('generos.store') }}"
                             method="POST">
 
                             @csrf
@@ -314,7 +314,7 @@
         </div>
 
 
-        @include('areas.modal')
+        @include('generos.modal')
 
 
 
@@ -342,7 +342,7 @@
                 $('#edit_descripcion').val(descripcion)
 
                 $('#editEvent').modal('show');
-                var actionUrl = "{{ route('areas.update', ':id') }}";
+                var actionUrl = "{{ route('generos.update', ':id') }}";
                 actionUrl = actionUrl.replace(':id', id);
                 $('#editActividad').attr('action', actionUrl);
 

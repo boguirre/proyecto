@@ -29,7 +29,17 @@ class AreaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'descripcion' => 'required',
+        ], [
+            'descripcion.required' => 'Ingrese el nombre de la cobertura.',
+        ]);
+        Area::create($request->all() + [
+
+            // 'user_id' => Auth::user()->id
+
+        ]);
+        return redirect()->route('areas.index')->with('guardar', 'ok');
     }
 
     /**
@@ -53,7 +63,18 @@ class AreaController extends Controller
      */
     public function update(Request $request, Area $area)
     {
-        //
+        $request->validate([
+            'edit_descripcion' => 'required',
+        ], [
+            'edit_descripcion.required' => 'Ingrese el nombre de la cobertura.',
+        ]);
+
+        $area->update([[
+            // $zona_embarque->nombre = $request->edit_nombre,
+            $area->descripcion = $request->edit_descripcion,
+        ]]);
+
+        return redirect()->route('areas.index')->with('actualizar', 'ok');
     }
 
     /**
@@ -61,6 +82,16 @@ class AreaController extends Controller
      */
     public function destroy(Area $area)
     {
-        //
+        $area->estado = 2;
+        $area->save();
+
+        return redirect()->route('areas.index')->with('desactivar', 'ok');
+    }
+
+    public function activar(Area $area)
+    {
+        $area->estado = 1;
+        $area->save();
+        return redirect()->route('areas.index')->with('activar', 'ok');
     }
 }
