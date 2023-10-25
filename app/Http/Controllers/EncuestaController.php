@@ -23,5 +23,6 @@ class EncuestaController extends Controller
     public function store(Request $request)
     {
         return view('gracias');
+        //return $request->all();
     }
 }
