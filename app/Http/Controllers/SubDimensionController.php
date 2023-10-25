@@ -83,12 +83,14 @@ class SubDimensionController extends Controller
 
         ], [
             'edit_descripcion.required' => 'Ingrese el nombre de la cobertura.',
-            'edit_dimension_id.required' => 'Seleccione la dimensión.',
+            'edit_dimension_id.required' => 'Seleccione la dimensión.'
 
         ]);
 
         $subdimensione->update([[
             // $zona_embarque->nombre = $request->edit_nombre,
+            $subdimensione->dimension_id = $request->edit_dimension_id,
+
             $subdimensione->descripcion = $request->edit_descripcion,
         ]]);
 
