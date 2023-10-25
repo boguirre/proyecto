@@ -336,6 +336,8 @@
                                                 <option value="{{$tipo_respuesta->id}}" {{($tipo_respuesta->id == 5) ? 'selected' : ''}}>{{$tipo_respuesta->descripcion}}</option>
                                             @endforeach
                                         </select>
+                                    </div>
+                                    <div class="col-md-6">
                                         <input type="number" name="val_r_05" id="" class="form-control mt-1" placeholder="Ingrese el valor de la respuesta" required step="1" min="0">
                                     </div>
                                     <div class="col-md-6 mt-1">
@@ -344,6 +346,8 @@
                                                 <option value="{{$tipo_respuesta->id}}" {{($tipo_respuesta->id == 4) ? 'selected' : ''}}>{{$tipo_respuesta->descripcion}}</option>
                                             @endforeach
                                         </select>
+                                    </div>
+                                    <div class="col-md-6">
                                         <input type="number" name="val_r_04" id="" class="form-control mt-1" placeholder="Ingrese el valor de la respuesta" required step="1" min="0">
                                     </div>
                                     <div class="col-md-6 mt-1">
@@ -352,6 +356,8 @@
                                                 <option value="{{$tipo_respuesta->id}}" {{($tipo_respuesta->id == 3) ? 'selected' : ''}}>{{$tipo_respuesta->descripcion}}</option>
                                             @endforeach
                                         </select>
+                                    </div>
+                                    <div class="col-md-6">
                                         <input type="number" name="val_r_03" id="" class="form-control mt-1" placeholder="Ingrese el valor de la respuesta" required step="1" min="0">
                                     </div>
                                     <div class="col-md-6 mt-1">
@@ -360,6 +366,8 @@
                                                 <option value="{{$tipo_respuesta->id}}" {{($tipo_respuesta->id == 2) ? 'selected' : ''}}>{{$tipo_respuesta->descripcion}}</option>
                                             @endforeach
                                         </select>
+                                    </div>
+                                    <div class="col-md-6">
                                         <input type="number" name="val_r_02" id="" class="form-control mt-1" placeholder="Ingrese el valor de la respuesta" required step="1" min="0">
                                     </div>
                                     <div class="col-md-6 mt-1">
@@ -368,6 +376,8 @@
                                                 <option value="{{$tipo_respuesta->id}}" {{($tipo_respuesta->id == 1) ? 'selected' : ''}}>{{$tipo_respuesta->descripcion}}</option>
                                             @endforeach
                                         </select>
+                                    </div>
+                                    <div class="col-md-6">
                                         <input type="number" name="val_r_01" id="" class="form-control mt-1" placeholder="Ingrese el valor de la respuesta" required step="1" min="0">
                                     </div>
 
