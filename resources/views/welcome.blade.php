@@ -120,7 +120,9 @@
                                                         <div class="card h-100"
                                                             style="background-color: gold; border-radius: 50px; display: block; color: black; font-weight: bold">
                                                             <div class="card-body d-flex flex-column">
-                                                                <i class="icon_check_alt" style="color: green"></i>
+                                                                <img src="encuesta_assets/img/svg-1.svg" width="80"
+                                                        height="80" alt="" />
+                                                                <br>
                                                                 <p class="card-text flex-grow-1">Alineamiento
                                                                     Estrategico</p>
                                                             </div>
@@ -130,7 +132,9 @@
                                                         <div class="card h-100"
                                                             style="background-color: gold; border-radius: 50px; display: block; color: black; font-weight: bold">
                                                             <div class="card-body d-flex flex-column">
-                                                                <i class="icon_check_alt" style="color: green"></i>
+                                                                <img src="encuesta_assets/img/svg-2.svg" width="80"
+                                                        height="80" alt="" />
+                                                                <br>
                                                                 <p class="card-text flex-grow-1">Plan de Gestion de
                                                                     Desempeño</p>
                                                             </div>
@@ -140,7 +144,9 @@
                                                         <div class="card h-100"
                                                             style="background-color: gold; border-radius: 50px; display: block; color: black; font-weight: bold">
                                                             <div class="card-body d-flex flex-column">
-                                                                <i class="icon_check_alt" style="color: green"></i>
+                                                                <img src="encuesta_assets/img/svg-3.svg" width="80"
+                                                        height="80" alt="" />
+                                                                <br>
                                                                 <p class="card-text flex-grow-1">Formalizacion</p>
                                                             </div>
                                                         </div>
@@ -149,7 +155,9 @@
                                                         <div class="card h-100"
                                                             style="background-color: gold; border-radius: 50px; display: block; color: black; font-weight: bold">
                                                             <div class="card-body d-flex flex-column">
-                                                                <i class="icon_check_alt" style="color: green"></i>
+                                                                <img src="encuesta_assets/img/svg-4.svg" width="80"
+                                                        height="80" alt="" />
+                                                                <br>
                                                                 <p class="card-text flex-grow-1">Politicas de Gestion
                                                                 </p>
                                                             </div>
@@ -162,6 +170,15 @@
                                     </div>
 
                                     <div class="step">
+                                        <div class="col-xl-12 col-lg-12 d-flex align-items-center">
+                                            <div class="main_title_1">
+                                                <h4>
+                                                    <img src="encuesta_assets/img/main_icon_1.svg" width="80"
+                                                        height="80" alt="" />
+                                                    Datos coporativos
+                                                </h4>
+                                            </div>
+                                        </div>
                                         <h3 class="main_question">
                                             <strong>1 of 1</strong>Por favor, completar primero los
                                             sguientes datos:
