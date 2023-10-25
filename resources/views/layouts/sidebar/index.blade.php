@@ -158,10 +158,10 @@
                 <i data-feather='sliders'></i>
                 <span class="menu-title text-truncate" data-i18n="Invoice">Rangos</span></a>
             <ul class="menu-content">
-                <li><a class="d-flex align-items-center" href="app-invoice-list.html"><i data-feather="circle"></i><span
+                <li class="nav-item {{ Request::is('rango-edad') | Request::is('rango-edad/*') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('rango-edad.index')}}"><i data-feather="circle"></i><span
                             class="menu-item text-truncate" data-i18n="List">Edad</span></a>
                 </li>
-                <li><a class="d-flex align-items-center" href="app-invoice-preview.html"><i
+                <li class="nav-item {{ Request::is('rango-antiguedad') | Request::is('rango-antiguedad/*') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('rango-antiguedad.index')}}"><i
                             data-feather="circle"></i><span class="menu-item text-truncate"
                             data-i18n="Preview">Antiguedad</span></a>
                 </li>
