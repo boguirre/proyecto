@@ -27,7 +27,7 @@ class DatabaseSeeder extends Seeder
             EmpresaSeeder::class,
             GeneroSeeder::class,
             RangoEdadSeeder::class,
-            RangoEdadSeeder::class,
+            RangoAntiguedadSeeder::class,
             TipoRespuestaSeeder::class,
             DimensionSeeder::class,
             SubDimensionSeeder::class,
