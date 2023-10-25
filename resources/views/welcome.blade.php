@@ -422,17 +422,7 @@
         <footer>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-3">©2020 Satisfyc</div>
-                    <div class="col-md-9">
-                        <ul class="clearfix">
-                            <li>
-                                <a href="#0" class="animated_link">Purchase this template</a>
-                            </li>
-                            <li><a href="index.html" class="animated_link">Demo 1</a></li>
-                            <li><a href="index-2.html" class="animated_link">Demo 2</a></li>
-                            <li><a href="index-3.html" class="animated_link">Demo 3</a></li>
-                        </ul>
-                    </div>
+                    <div class="col-md-3">©2023 LISEGA</div>
                 </div>
                 <!-- /row -->
             </div>
@@ -443,7 +433,7 @@
     <!-- /wrapper_centering -->
 
     <!-- Modal terms -->
-    <div class="modal fade" id="terms-txt" tabindex="-1" role="dialog" aria-labelledby="termsLabel"
+    {{-- <div class="modal fade" id="terms-txt" tabindex="-1" role="dialog" aria-labelledby="termsLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -482,7 +472,7 @@
                         Close
                     </button>
                 </div>
-            </div>
+            </div> --}}
             <!-- /.modal-content -->
         </div>
         <!-- /.modal-dialog -->
