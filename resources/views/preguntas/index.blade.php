@@ -330,55 +330,105 @@
 
                                     <label for="estado_actividad" class="form-label">Elegir Tipo de Respuestas:</label>
 
-                                    <div class="col-md-6 mt-1">
-                                        <select name="tipo_r_05" id="" class="form-control">
-                                            @foreach ($tipo_respuestas as $tipo_respuesta)
-                                                <option value="{{$tipo_respuesta->id}}" {{($tipo_respuesta->id == 5) ? 'selected' : ''}}>{{$tipo_respuesta->descripcion}}</option>
-                                            @endforeach
-                                        </select>
+                                    <div class="card" style="border-radius: 50px; border: 1px solid #d8d6de;">
+                                        <div class="card-body" style="padding: 1rem 1rem;">
+                                            <div class="row">
+                                                <div class="col-md-1" style="margin-top: 0.5rem">
+                                                    <a href="#" class="btn btn-primary btn-sm">1</a>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <select name="tipo_r_05" id="" class="form-control">
+                                                        @foreach ($tipo_respuestas as $tipo_respuesta)
+                                                            <option value="{{$tipo_respuesta->id}}" {{($tipo_respuesta->id == 5) ? 'selected' : ''}}>{{$tipo_respuesta->descripcion}}</option>
+                                                        @endforeach
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <input type="number" name="val_r_05" id="" class="form-control" placeholder="Ingrese el valor de la respuesta" required step="1" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> 
+
+                                    <div class="card" style="border-radius: 50px; border: 1px solid #d8d6de;">
+                                        <div class="card-body" style="padding: 1rem 1rem;">
+                                            <div class="row">
+                                                <div class="col-md-1" style="margin-top: 0.5rem">
+                                                    <a href="#" class="btn btn-primary btn-sm">2</a>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <select name="tipo_r_04" id="" class="form-control">
+                                                        @foreach ($tipo_respuestas as $tipo_respuesta)
+                                                            <option value="{{$tipo_respuesta->id}}" {{($tipo_respuesta->id == 4) ? 'selected' : ''}}>{{$tipo_respuesta->descripcion}}</option>
+                                                        @endforeach
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <input type="number" name="val_r_04" id="" class="form-control" placeholder="Ingrese el valor de la respuesta" required step="1" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <input type="number" name="val_r_05" id="" class="form-control mt-1" placeholder="Ingrese el valor de la respuesta" required step="1" min="0">
+
+
+                                    <div class="card" style="border-radius: 50px; border: 1px solid #d8d6de;">
+                                        <div class="card-body" style="padding: 1rem 1rem;">
+                                            <div class="row">
+                                                <div class="col-md-1" style="margin-top: 0.5rem">
+                                                    <a href="#" class="btn btn-primary btn-sm">3</a>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <select name="tipo_r_03" id="" class="form-control">
+                                                        @foreach ($tipo_respuestas as $tipo_respuesta)
+                                                            <option value="{{$tipo_respuesta->id}}" {{($tipo_respuesta->id == 3) ? 'selected' : ''}}>{{$tipo_respuesta->descripcion}}</option>
+                                                        @endforeach
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <input type="number" name="val_r_03" id="" class="form-control" placeholder="Ingrese el valor de la respuesta" required step="1" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="col-md-6 mt-1">
-                                        <select name="tipo_r_04" id="" class="form-control">
-                                            @foreach ($tipo_respuestas as $tipo_respuesta)
-                                                <option value="{{$tipo_respuesta->id}}" {{($tipo_respuesta->id == 4) ? 'selected' : ''}}>{{$tipo_respuesta->descripcion}}</option>
-                                            @endforeach
-                                        </select>
+                                    
+                                    <div class="card" style="border-radius: 50px; border: 1px solid #d8d6de;">
+                                        <div class="card-body" style="padding: 1rem 1rem;">
+                                            <div class="row">
+                                                <div class="col-md-1" style="margin-top: 0.5rem">
+                                                    <a href="#" class="btn btn-primary btn-sm">4</a>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <select name="tipo_r_02" id="" class="form-control">
+                                                        @foreach ($tipo_respuestas as $tipo_respuesta)
+                                                            <option value="{{$tipo_respuesta->id}}" {{($tipo_respuesta->id == 2) ? 'selected' : ''}}>{{$tipo_respuesta->descripcion}}</option>
+                                                        @endforeach
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <input type="number" name="val_r_02" id="" class="form-control" placeholder="Ingrese el valor de la respuesta" required step="1" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <input type="number" name="val_r_04" id="" class="form-control mt-1" placeholder="Ingrese el valor de la respuesta" required step="1" min="0">
-                                    </div>
-                                    <div class="col-md-6 mt-1">
-                                        <select name="tipo_r_03" id="" class="form-control">
-                                            @foreach ($tipo_respuestas as $tipo_respuesta)
-                                                <option value="{{$tipo_respuesta->id}}" {{($tipo_respuesta->id == 3) ? 'selected' : ''}}>{{$tipo_respuesta->descripcion}}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input type="number" name="val_r_03" id="" class="form-control mt-1" placeholder="Ingrese el valor de la respuesta" required step="1" min="0">
-                                    </div>
-                                    <div class="col-md-6 mt-1">
-                                        <select name="tipo_r_02" id="" class="form-control">
-                                            @foreach ($tipo_respuestas as $tipo_respuesta)
-                                                <option value="{{$tipo_respuesta->id}}" {{($tipo_respuesta->id == 2) ? 'selected' : ''}}>{{$tipo_respuesta->descripcion}}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input type="number" name="val_r_02" id="" class="form-control mt-1" placeholder="Ingrese el valor de la respuesta" required step="1" min="0">
-                                    </div>
-                                    <div class="col-md-6 mt-1">
-                                        <select name="tipo_r_01" id="" class="form-control">
-                                            @foreach ($tipo_respuestas as $tipo_respuesta)
-                                                <option value="{{$tipo_respuesta->id}}" {{($tipo_respuesta->id == 1) ? 'selected' : ''}}>{{$tipo_respuesta->descripcion}}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input type="number" name="val_r_01" id="" class="form-control mt-1" placeholder="Ingrese el valor de la respuesta" required step="1" min="0">
+                                    
+                                    <div class="card" style="border-radius: 50px; border: 1px solid #d8d6de;">
+                                        <div class="card-body" style="padding: 1rem 1rem;">
+                                            <div class="row">
+                                                <div class="col-md-1" style="margin-top: 0.5rem">
+                                                    <a href="#" class="btn btn-primary btn-sm">5</a>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <select name="tipo_r_01" id="" class="form-control">
+                                                        @foreach ($tipo_respuestas as $tipo_respuesta)
+                                                            <option value="{{$tipo_respuesta->id}}" {{($tipo_respuesta->id == 1) ? 'selected' : ''}}>{{$tipo_respuesta->descripcion}}</option>
+                                                        @endforeach
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <input type="number" name="val_r_01" id="" class="form-control" placeholder="Ingrese el valor de la respuesta" required step="1" min="0">
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
 
                                 </div>
