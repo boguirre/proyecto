@@ -143,10 +143,11 @@
                                             {{ $preguntum->descripcion ?? 'No existe descripción.....' }}
                                         </td>
                                         <td>
-                                            {{$preguntum->sub_dimension->descripcion}}
+                                            {{ $preguntum->sub_dimension->descripcion }}
                                         </td>
                                         <td>
-                                            <button class="btn {{ $preguntum->estado == '1' ? 'btn-success' : 'btn-danger' }}">
+                                            <button
+                                                class="btn {{ $preguntum->estado == '1' ? 'btn-success' : 'btn-danger' }}">
                                                 {{ $preguntum->estado == '1' ? 'Habilitado' : 'Deshabilitado' }}
 
                                             </button>
@@ -164,18 +165,18 @@
                                                     data-bs-toggle="modal" data-bs-target="#editEvent"
                                                     data-id="{{ $preguntum->id }}" {{-- data-nombre="{{ $area->nombre }}" --}}
                                                     data-descripcion="{{ $preguntum->descripcion }}"
-                                                    data-cod_num_preg="{{$preguntum->cod_num_preg}}"
-                                                    data-sub_dimension_id="{{$preguntum->sub_dimension_id}}"
-                                                    data-tipo_r_01_id="{{$preguntum->tipo_r_01_id}}"
-                                                    data-tipo_r_02_id="{{$preguntum->tipo_r_02_id}}"
-                                                    data-tipo_r_03_id="{{$preguntum->tipo_r_03_id}}"
-                                                    data-tipo_r_04_id="{{$preguntum->tipo_r_04_id}}"
-                                                    data-tipo_r_05_id="{{$preguntum->tipo_r_05_id}}"
-                                                    data-val_r_01="{{$preguntum->val_r_01}}"
-                                                    data-val_r_02="{{$preguntum->val_r_02}}"
-                                                    data-val_r_03="{{$preguntum->val_r_03}}"
-                                                    data-val_r_04="{{$preguntum->val_r_04}}"
-                                                    data-val_r_05="{{$preguntum->val_r_05}}">
+                                                    data-cod_num_preg="{{ $preguntum->cod_num_preg }}"
+                                                    data-sub_dimension_id="{{ $preguntum->sub_dimension_id }}"
+                                                    data-tipo_r_01_id="{{ $preguntum->tipo_r_01_id }}"
+                                                    data-tipo_r_02_id="{{ $preguntum->tipo_r_02_id }}"
+                                                    data-tipo_r_03_id="{{ $preguntum->tipo_r_03_id }}"
+                                                    data-tipo_r_04_id="{{ $preguntum->tipo_r_04_id }}"
+                                                    data-tipo_r_05_id="{{ $preguntum->tipo_r_05_id }}"
+                                                    data-val_r_01="{{ $preguntum->val_r_01 }}"
+                                                    data-val_r_02="{{ $preguntum->val_r_02 }}"
+                                                    data-val_r_03="{{ $preguntum->val_r_03 }}"
+                                                    data-val_r_04="{{ $preguntum->val_r_04 }}"
+                                                    data-val_r_05="{{ $preguntum->val_r_05 }}">
                                                     <i data-feather='edit'></i>
 
                                                 </a>
@@ -213,7 +214,7 @@
 
                             </tbody>
                         </table>
-                        
+
                         <div class="row">
 
                             <div class="col-md-6 mt-1">
@@ -232,8 +233,7 @@
                                 <div id="result-pagination" class="dataTables_paginate">
                                     <ul class="pagination justify-content-end">
                                         <li class="page-item {{ $preguntas->previousPageUrl() ? '' : 'disabled' }}">
-                                            <a class="page-link"
-                                                href="{{ $preguntas->previousPageUrl() }}">Anterior</a>
+                                            <a class="page-link" href="{{ $preguntas->previousPageUrl() }}">Anterior</a>
                                         </li>
 
                                         @if ($preguntas->currentPage() > 3)
@@ -267,8 +267,7 @@
                                         @endif
 
                                         <li class="page-item {{ $preguntas->nextPageUrl() ? '' : 'disabled' }}">
-                                            <a class="page-link"
-                                                href="{{ $preguntas->nextPageUrl() }}">Siguiente</a>
+                                            <a class="page-link" href="{{ $preguntas->nextPageUrl() }}">Siguiente</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -321,7 +320,8 @@
                                         <label for="estado_actividad" class="form-label">Elegir Sub Dimension</label>
                                         <select name="sub_dimension_id" id="" class="form-control">
                                             @foreach ($sub_dimensiones as $sub_dimension)
-                                                <option value="{{$sub_dimension->id}}">{{$sub_dimension->descripcion}}</option>
+                                                <option value="{{ $sub_dimension->id }}">
+                                                    {{ $sub_dimension->descripcion }}</option>
                                             @endforeach
                                         </select>
                                     </div>
@@ -339,16 +339,21 @@
                                                 <div class="col-md-5">
                                                     <select name="tipo_r_05" id="" class="form-control">
                                                         @foreach ($tipo_respuestas as $tipo_respuesta)
-                                                            <option value="{{$tipo_respuesta->id}}" {{($tipo_respuesta->id == 5) ? 'selected' : ''}}>{{$tipo_respuesta->descripcion}}</option>
+                                                            <option value="{{ $tipo_respuesta->id }}"
+                                                                {{ $tipo_respuesta->id == 5 ? 'selected' : '' }}>
+                                                                {{ $tipo_respuesta->descripcion }}</option>
                                                         @endforeach
                                                     </select>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <input type="number" name="val_r_05" id="" class="form-control" placeholder="Ingrese el valor de la respuesta" required step="1" min="0">
+                                                    <input type="number" name="val_r_05" id=""
+                                                        class="form-control"
+                                                        placeholder="Ingrese el valor de la respuesta" required
+                                                        step="1" min="0">
                                                 </div>
                                             </div>
                                         </div>
-                                    </div> 
+                                    </div>
 
                                     <div class="card" style="border-radius: 50px; border: 1px solid #d8d6de;">
                                         <div class="card-body" style="padding: 1rem 1rem;">
@@ -359,12 +364,17 @@
                                                 <div class="col-md-5">
                                                     <select name="tipo_r_04" id="" class="form-control">
                                                         @foreach ($tipo_respuestas as $tipo_respuesta)
-                                                            <option value="{{$tipo_respuesta->id}}" {{($tipo_respuesta->id == 4) ? 'selected' : ''}}>{{$tipo_respuesta->descripcion}}</option>
+                                                            <option value="{{ $tipo_respuesta->id }}"
+                                                                {{ $tipo_respuesta->id == 4 ? 'selected' : '' }}>
+                                                                {{ $tipo_respuesta->descripcion }}</option>
                                                         @endforeach
                                                     </select>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <input type="number" name="val_r_04" id="" class="form-control" placeholder="Ingrese el valor de la respuesta" required step="1" min="0">
+                                                    <input type="number" name="val_r_04" id=""
+                                                        class="form-control"
+                                                        placeholder="Ingrese el valor de la respuesta" required
+                                                        step="1" min="0">
                                                 </div>
                                             </div>
                                         </div>
@@ -380,17 +390,22 @@
                                                 <div class="col-md-5">
                                                     <select name="tipo_r_03" id="" class="form-control">
                                                         @foreach ($tipo_respuestas as $tipo_respuesta)
-                                                            <option value="{{$tipo_respuesta->id}}" {{($tipo_respuesta->id == 3) ? 'selected' : ''}}>{{$tipo_respuesta->descripcion}}</option>
+                                                            <option value="{{ $tipo_respuesta->id }}"
+                                                                {{ $tipo_respuesta->id == 3 ? 'selected' : '' }}>
+                                                                {{ $tipo_respuesta->descripcion }}</option>
                                                         @endforeach
                                                     </select>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <input type="number" name="val_r_03" id="" class="form-control" placeholder="Ingrese el valor de la respuesta" required step="1" min="0">
+                                                    <input type="number" name="val_r_03" id=""
+                                                        class="form-control"
+                                                        placeholder="Ingrese el valor de la respuesta" required
+                                                        step="1" min="0">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="card" style="border-radius: 50px; border: 1px solid #d8d6de;">
                                         <div class="card-body" style="padding: 1rem 1rem;">
                                             <div class="row">
@@ -400,17 +415,22 @@
                                                 <div class="col-md-5">
                                                     <select name="tipo_r_02" id="" class="form-control">
                                                         @foreach ($tipo_respuestas as $tipo_respuesta)
-                                                            <option value="{{$tipo_respuesta->id}}" {{($tipo_respuesta->id == 2) ? 'selected' : ''}}>{{$tipo_respuesta->descripcion}}</option>
+                                                            <option value="{{ $tipo_respuesta->id }}"
+                                                                {{ $tipo_respuesta->id == 2 ? 'selected' : '' }}>
+                                                                {{ $tipo_respuesta->descripcion }}</option>
                                                         @endforeach
                                                     </select>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <input type="number" name="val_r_02" id="" class="form-control" placeholder="Ingrese el valor de la respuesta" required step="1" min="0">
+                                                    <input type="number" name="val_r_02" id=""
+                                                        class="form-control"
+                                                        placeholder="Ingrese el valor de la respuesta" required
+                                                        step="1" min="0">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="card" style="border-radius: 50px; border: 1px solid #d8d6de;">
                                         <div class="card-body" style="padding: 1rem 1rem;">
                                             <div class="row">
@@ -420,12 +440,17 @@
                                                 <div class="col-md-5">
                                                     <select name="tipo_r_01" id="" class="form-control">
                                                         @foreach ($tipo_respuestas as $tipo_respuesta)
-                                                            <option value="{{$tipo_respuesta->id}}" {{($tipo_respuesta->id == 1) ? 'selected' : ''}}>{{$tipo_respuesta->descripcion}}</option>
+                                                            <option value="{{ $tipo_respuesta->id }}"
+                                                                {{ $tipo_respuesta->id == 1 ? 'selected' : '' }}>
+                                                                {{ $tipo_respuesta->descripcion }}</option>
                                                         @endforeach
                                                     </select>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <input type="number" name="val_r_01" id="" class="form-control" placeholder="Ingrese el valor de la respuesta" required step="1" min="0">
+                                                    <input type="number" name="val_r_01" id=""
+                                                        class="form-control"
+                                                        placeholder="Ingrese el valor de la respuesta" required
+                                                        step="1" min="0">
                                                 </div>
                                             </div>
                                         </div>
@@ -508,6 +533,26 @@
 
             })
         })
+    </script>
+
+    <script>
+        // Obtén el elemento de entrada
+        var numeroInput = document.getElementById("edit_cod_num_preg");
+
+        // Agrega un controlador de eventos para el evento "input"
+        numeroInput.addEventListener("input", function(event) {
+            // Obtén el valor actual del campo de entrada
+            var valor = parseInt(event.target.value, 10);
+
+            // Verifica si el valor está fuera del rango permitido
+            if (isNaN(valor) || valor < 1) {
+                // Si es menor que 1, establece el valor en 1
+                event.target.value = 1;
+            } else if (valor > 60) {
+                // Si es mayor que 60, establece el valor en 60
+                event.target.value = 60;
+            }
+        });
     </script>
 
     @if (session('guardar'))
