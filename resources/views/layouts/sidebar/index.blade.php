@@ -186,7 +186,7 @@
                             class="menu-item text-truncate" data-i18n="Edit">Sub Dimensiones</span></a>
                 </li>
 
-                <li class="nav-item {{ Request::is('preguntas') | Request::is('pregunta/*') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('pregunta.index')}}"><i data-feather="circle"></i><span
+                <li class="nav-item {{ Request::is('pregunta') | Request::is('pregunta/*') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('pregunta.index')}}"><i data-feather="circle"></i><span
                             class="menu-item text-truncate" data-i18n="Add">Preguntas</span></a>
                 </li>
             </ul>

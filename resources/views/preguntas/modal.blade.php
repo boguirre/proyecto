@@ -29,7 +29,7 @@
                             <div class="col-md-6 mt-1">
                                 <label for="estado_actividad" class="form-label">Número de la Pregunta</label>
                                 <input type="number" name="edit_cod_num_preg" id="edit_cod_num_preg"
-                                    class="form-control" required step="1" min="0">
+                                    class="form-control" required step="1" min="1" max="60">
                             </div>
 
                             <div class="col-md-6 mt-1 mb-1">
