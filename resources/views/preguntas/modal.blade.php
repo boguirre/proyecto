@@ -53,6 +53,8 @@
                                             {{ $tipo_respuesta->descripcion }}</option>
                                     @endforeach
                                 </select>
+                            </div>
+                            <div class="col-md-6">
                                 <input type="number" name="edit_val_r_05" id="edit_val_r_05" class="form-control mt-1"
                                     placeholder="Ingrese el valor de la respuesta" required step="1" min="0">
                             </div>
@@ -63,6 +65,8 @@
                                             {{ $tipo_respuesta->descripcion }}</option>
                                     @endforeach
                                 </select>
+                            </div>
+                            <div class="col-md-6">
                                 <input type="number" name="edit_val_r_04" id="edit_val_r_04" class="form-control mt-1"
                                     placeholder="Ingrese el valor de la respuesta" required step="1" min="0">
                             </div>
@@ -73,6 +77,8 @@
                                             {{ $tipo_respuesta->descripcion }}</option>
                                     @endforeach
                                 </select>
+                            </div>
+                            <div class="col-md-6">
                                 <input type="number" name="edit_val_r_03" id="edit_val_r_03" class="form-control mt-1"
                                     placeholder="Ingrese el valor de la respuesta" required step="1" min="0">
                             </div>
@@ -83,6 +89,8 @@
                                             {{ $tipo_respuesta->descripcion }}</option>
                                     @endforeach
                                 </select>
+                            </div>
+                            <div class="col-md-6">
                                 <input type="number" name="edit_val_r_02" id="edit_val_r_02" class="form-control mt-1"
                                     placeholder="Ingrese el valor de la respuesta" required step="1" min="0">
                             </div>
@@ -93,8 +101,10 @@
                                             {{ $tipo_respuesta->descripcion }}</option>
                                     @endforeach
                                 </select>
+                            </div>
+                            <div class="col-md-6">
                                 <input type="number" name="edit_val_r_01" id="edit_val_r_01" class="form-control mt-1"
-                                    placeholder="Ingrese el valor de la respuesta" required step="1" min="0">
+                                placeholder="Ingrese el valor de la respuesta" required step="1" min="0">
                             </div>
 
                         </div>
