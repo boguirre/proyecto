@@ -11,6 +11,10 @@ class SubDimension extends Model
 
     protected $guarded = ['id'];
 
+    public function dimensiones(){
+        return $this->belongsTo(Dimension::class,'dimension_id');
+    }
+
     public function preguntas()
     {
         return $this->hasMany(Pregunta::class);

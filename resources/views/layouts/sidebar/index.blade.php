@@ -182,11 +182,8 @@
                             data-feather="circle"></i><span class="menu-item text-truncate"
                             data-i18n="Preview">Dimensiones</span></a>
                 </li>
-                <li><a class="d-flex align-items-center" href="app-invoice-edit.html"><i data-feather="circle"></i><span
+                <li class="nav-item {{ Request::is('subdimensiones') | Request::is('subdimensiones/*') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('subdimensiones.index')}}"><i data-feather="circle"></i><span
                             class="menu-item text-truncate" data-i18n="Edit">Sub Dimensiones</span></a>
-                </li>
-                <li><a class="d-flex align-items-center" href="app-invoice-add.html"><i data-feather="circle"></i><span
-                            class="menu-item text-truncate" data-i18n="Add">Respuestas</span></a>
                 </li>
 
                 <li class="nav-item {{ Request::is('preguntas') | Request::is('pregunta/*') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{route('pregunta.index')}}"><i data-feather="circle"></i><span

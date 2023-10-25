@@ -9,6 +9,7 @@ use App\Http\Controllers\MenuPrincipalController;
 use App\Http\Controllers\PreguntaController;
 use App\Http\Controllers\RangoAntiguedadController;
 use App\Http\Controllers\RangoEdadController;
+use App\Http\Controllers\SubDimensionController;
 use App\Http\Controllers\TipoRespuestaController;
 use Illuminate\Support\Facades\Route;
 
@@ -56,6 +57,9 @@ Route::resource('tipo-respuestas', TipoRespuestaController::class)->names('tipo-
 
 Route::post('dimensiones/{dimensione}/activar', [DimensionController::class, 'activar'])->name('dimensiones.activar');
 Route::resource('dimensiones', DimensionController::class)->names('dimensiones');
+
+Route::post('subdimensiones/{subdimensione}/activar', [SubDimensionController::class, 'activar'])->name('subdimensiones.activar');
+Route::resource('subdimensiones', SubDimensionController::class)->names('subdimensiones');
 
 Route::post('rango-edad/{rango_edad}/activar', [RangoEdadController::class, 'activar'])->name('rango-edad.activar');
 Route::resource('rango-edad', RangoEdadController::class)->names('rango-edad');
