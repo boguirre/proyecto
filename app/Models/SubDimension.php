@@ -19,4 +19,9 @@ class SubDimension extends Model
     {
         return $this->hasMany(Pregunta::class);
     }
+
+    public function dimension()
+    {
+        return $this->belongsTo(Dimension::class);
+    }
 }

@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('estado')->default(1);
             $table->unsignedBigInteger('sub_dimension_id');
             $table->foreign('sub_dimension_id')->references('id')->on('sub_dimensions');
+            $table->unsignedBigInteger('dimension_id')->nullable();
+            $table->foreign('dimension_id')->references('id')->on('dimensions');
             $table->unsignedBigInteger('tipo_r_01_id')->default(1);
             $table->foreign('tipo_r_01_id')->references('id')->on('tipo_respuestas');
             $table->integer('val_r_01')->default(20);

@@ -53,6 +53,7 @@ class PreguntaController extends Controller
         $pregunta = Pregunta::create($request->all());
 
         $pregunta->cod_num_preg = $pregunta->id;
+        $pregunta->dimension_id = $pregunta->sub_dimension->dimension->id;
         $pregunta->save();
 
 
@@ -82,10 +83,17 @@ class PreguntaController extends Controller
     {
         $request->validate([
             'edit_descripcion' => 'required',
-            'edit_cod_num_preg' => 'required|unique:preguntas,cod_num_preg,' . $preguntum->id,
+            //'edit_cod_num_preg' => 'required|unique:preguntas,cod_num_preg,' . $preguntum->id,
         ], [
             'edit_descripcion.required' => 'Ingrese el nombre de la pregunta.',
         ]);
+
+
+        if ($request->edit_cod_num_preg != $preguntum->cod_num_preg) {
+            $preguntaBefore = Pregunta::where('cod_num_preg', $request->edit_cod_num_preg)->first();
+            $preguntaBefore->cod_num_preg = $preguntum->cod_num_preg;
+            $preguntaBefore->save();
+        }
 
         $preguntum->update([
 
@@ -102,10 +110,14 @@ class PreguntaController extends Controller
             "val_r_03" => $request->edit_val_r_03,
             "val_r_04" => $request->edit_val_r_04,
             "val_r_05" => $request->edit_val_r_05,
-            
+
         ]);
 
+        $preguntum->dimension_id = $preguntum->sub_dimension->dimension->id;
+        $preguntum->save();
+
         return redirect()->route('pregunta.index')->with('actualizar', 'ok');
+        // return ['preguntaBefore' => $preguntaBefore, 'preguntum' => $preguntum];
     }
 
     /**

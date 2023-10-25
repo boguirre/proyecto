@@ -575,6 +575,23 @@
             })
         </script>
     @endif
+
+    @error('edit_cod_num_preg')
+        <script>
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+
+            })
+            Toast.fire({
+                icon: 'error',
+                title: 'El numero de orden de la pregunto ya esta siendo usado!!'
+            })
+        </script>
+    @enderror
     <script>
         $('.activar').submit(function(e) {
             e.preventDefault()

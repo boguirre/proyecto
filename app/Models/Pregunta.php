@@ -16,6 +16,11 @@ class Pregunta extends Model
         return $this->belongsTo(SubDimension::class);
     }
 
+    public function dimension()
+    {
+        return $this->belongsTo(Dimension::class);
+    }
+
     public function tipo_r_01()
     {
         return $this->belongsTo(TipoRespuesta::class);

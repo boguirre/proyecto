@@ -186,15 +186,15 @@
                                         <div class="row">
                                             <div class="col-lg-6 col-md-6 col-6">
                                                 <div class="form-group">
-                                                    <label for="telephone">Fecha de Nacimiento</label>
-                                                    <input type="date" name="telephone" id="telephone"
+                                                    <label for="fec_nac_encuestado">Fecha de Nacimiento</label>
+                                                    <input type="date" name="fec_nac_encuestado" id="telephone"
                                                         class="form-control" required />
                                                 </div>
                                             </div>
                                             <div class="col-6">
                                                 <div class="form-group">
-                                                    <label for="age">Fecha de Ingreso</label>
-                                                    <input type="date" name="age" id="age"
+                                                    <label for="fec_ing_encuestado">Fecha de Ingreso</label>
+                                                    <input type="date" name="fec_ing_encuestado" id="age"
                                                         class="form-control" required />
                                                 </div>
                                             </div>
