@@ -317,7 +317,7 @@
                                         <input type="number" name="cod_num_preg" id="" class="form-control" required step="1" min="0">
                                     </div> --}}
 
-                                    <div class="col-md-12 mt-1">
+                                    <div class="col-md-12 mt-1 mb-1">
                                         <label for="estado_actividad" class="form-label">Elegir Sub Dimension</label>
                                         <select name="sub_dimension_id" id="" class="form-control">
                                             @foreach ($sub_dimensiones as $sub_dimension)
