@@ -32,7 +32,7 @@
                                     class="form-control" required step="1" min="0">
                             </div>
 
-                            <div class="col-md-6 mt-1">
+                            <div class="col-md-6 mt-1 mb-1">
                                 <label for="estado_actividad" class="form-label">Sub Dimension</label>
                                 <select name="edit_sub_dimension_id" id="edit_sub_dimension_id" class="form-control">
                                     @foreach ($sub_dimensiones as $sub_dimension)
