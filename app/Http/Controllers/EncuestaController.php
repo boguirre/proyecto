@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Area;
+use App\Models\Empresa;
 use App\Models\Encuestado;
 use App\Models\Genero;
 use App\Models\Pregunta;
@@ -19,11 +20,35 @@ class EncuestaController extends Controller
         $generos = Genero::all();
         $areas = Area::all();
 
-        return view('welcome', compact('preguntas', 'generos', 'areas'));
+        $empresa = Empresa::all()->first();
+
+        $añoActual = Carbon::now()->format('d-m-Y');
+
+        $fechaLimite = Carbon::createFromFormat('Y-m-d', $empresa->fecha_limite);
+        $fechaLimiteFormateada = $fechaLimite->format('d-m-Y');
+
+        if ($añoActual <= $fechaLimiteFormateada) {
+
+            return view('welcome', compact('preguntas', 'generos', 'areas'));
+            //return "ok";
+        } else {
+            return view('error');
+            //return "No";
+        }
+
+        //return view('welcome', compact('preguntas', 'generos', 'areas'));
+
+        //return $fechaLimiteFormateada;
     }
 
     public function store(Request $request)
     {
+
+        $request->validate([
+            'fec_nac_encuestado' => 'required|date',
+            'fec_ing_encuestado' => 'required|date',
+        ]);
+
         $fechaNac = $request->fec_nac_encuestado;
         $fechaIng = $request->fec_ing_encuestado;
 
@@ -37,6 +62,10 @@ class EncuestaController extends Controller
         $fechaIngreso = Carbon::parse($fechaIng);
         $hoy = Carbon::now();
         $antiguedad = $fechaIngreso->diffInYears($hoy);
+
+        if ($edad < 18) {
+            return redirect()->route('encuesta.index')->with('error', 'ok');
+        }
 
         switch (true) {
             case $edad >= 18 && $edad <= 24:
@@ -90,10 +119,12 @@ class EncuestaController extends Controller
                 break;
         }
 
+
         $encuestado = Encuestado::create($request->all() + [
             'rango_edad_id' => $rango_edad_id,
             'rango_antiguedad_id' => $rango_antiguedad_id
         ]);
+
 
         //return $encuestado;
 

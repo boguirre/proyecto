@@ -711,6 +711,18 @@ button[disabled] {
 }
 
 /*-------- 2.2 Success submit --------*/
+#success-error {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 190px;
+  margin-top: -250px;
+  margin-left: -150px;
+  text-align: center;
+  color: #444;
+}
+
 #success {
   position: absolute;
   top: 50%;

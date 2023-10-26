@@ -22,7 +22,9 @@ class PreguntaController extends Controller
             $query->where('descripcion', 'LIKE', "%$searchTerm%");
         }
 
-        $preguntas = $query->paginate(5);
+        $preguntas = $query
+        ->orderBy('cod_num_preg', 'asc')
+        ->paginate(5);
         $preguntas->appends(['search' => $request->input('search')]);
 
         $sub_dimensiones = SubDimension::all();

@@ -121,7 +121,7 @@
                                                             style="background-color: gold; border-radius: 50px; display: block; color: black; font-weight: bold">
                                                             <div class="card-body d-flex flex-column">
                                                                 <img src="encuesta_assets/img/svg-1.svg" width="80"
-                                                        height="80" alt="" />
+                                                                    height="80" alt="" />
                                                                 <br>
                                                                 <p class="card-text flex-grow-1">Alineamiento
                                                                     Estrategico</p>
@@ -132,8 +132,8 @@
                                                         <div class="card h-100"
                                                             style="background-color: gold; border-radius: 50px; display: block; color: black; font-weight: bold">
                                                             <div class="card-body d-flex flex-column">
-                                                                <img src="encuesta_assets/img/svg-2.svg" width="80"
-                                                        height="80" alt="" />
+                                                                <img src="encuesta_assets/img/svg-2.svg"
+                                                                    width="80" height="80" alt="" />
                                                                 <br>
                                                                 <p class="card-text flex-grow-1">Plan de Gestion de
                                                                     Desempeño</p>
@@ -144,8 +144,8 @@
                                                         <div class="card h-100"
                                                             style="background-color: gold; border-radius: 50px; display: block; color: black; font-weight: bold">
                                                             <div class="card-body d-flex flex-column">
-                                                                <img src="encuesta_assets/img/svg-3.svg" width="80"
-                                                        height="80" alt="" />
+                                                                <img src="encuesta_assets/img/svg-3.svg"
+                                                                    width="80" height="80" alt="" />
                                                                 <br>
                                                                 <p class="card-text flex-grow-1">Formalizacion</p>
                                                             </div>
@@ -155,8 +155,8 @@
                                                         <div class="card h-100"
                                                             style="background-color: gold; border-radius: 50px; display: block; color: black; font-weight: bold">
                                                             <div class="card-body d-flex flex-column">
-                                                                <img src="encuesta_assets/img/svg-4.svg" width="80"
-                                                        height="80" alt="" />
+                                                                <img src="encuesta_assets/img/svg-4.svg"
+                                                                    width="80" height="80" alt="" />
                                                                 <br>
                                                                 <p class="card-text flex-grow-1">Politicas de Gestion
                                                                 </p>
@@ -187,15 +187,15 @@
                                             <div class="col-lg-6 col-md-6 col-6">
                                                 <div class="form-group">
                                                     <label for="fec_nac_encuestado">Fecha de Nacimiento</label>
-                                                    <input type="date" name="fec_nac_encuestado" id="telephone"
-                                                        class="form-control" required />
+                                                    <input type="date" name="fec_nac_encuestado" id="age"
+                                                        class="form-control" pattern="\d{2}/\d{2}/\d{4}" required />
                                                 </div>
                                             </div>
                                             <div class="col-6">
                                                 <div class="form-group">
                                                     <label for="fec_ing_encuestado">Fecha de Ingreso</label>
                                                     <input type="date" name="fec_ing_encuestado" id="age"
-                                                        class="form-control" required />
+                                                        class="form-control" pattern="\d{2}/\d{2}/\d{4}" required />
                                                 </div>
                                             </div>
                                         </div>
@@ -250,7 +250,8 @@
                                                 </div>
                                             </div>
                                             <h3 class="main_question">
-                                                <strong>{{$pregunta->id}} de {{$total}}</strong>{{ $pregunta->descripcion }}
+                                                <strong>{{ $pregunta->cod_num_preg }} de
+                                                    {{ $total }}</strong>{{ $pregunta->descripcion }}
                                             </h3>
                                             <div class="review_block">
                                                 <ul>
@@ -258,8 +259,8 @@
                                                         <div class="checkbox_radio_container">
                                                             <input type="radio"
                                                                 id="r_{{ $pregunta->id }}_{{ $pregunta->tipo_r_05 }}"
-                                                                name="val_r_{{$pregunta->cod_num_preg}}" class="required"
-                                                                value="{{ $pregunta->val_r_05 }}"
+                                                                name="val_r_{{ $pregunta->cod_num_preg }}"
+                                                                class="required" value="{{ $pregunta->val_r_05 }}"
                                                                 onchange="getVals(this, 'question_1');" />
                                                             <label class="radio"
                                                                 for="r_{{ $pregunta->id }}_{{ $pregunta->tipo_r_05 }}"></label>
@@ -272,8 +273,8 @@
                                                         <div class="checkbox_radio_container">
                                                             <input type="radio"
                                                                 id="r_{{ $pregunta->id }}_{{ $pregunta->tipo_r_04 }}"
-                                                                name="val_r_{{$pregunta->cod_num_preg}}" class="required"
-                                                                value="{{ $pregunta->val_r_04 }}"
+                                                                name="val_r_{{ $pregunta->cod_num_preg }}"
+                                                                class="required" value="{{ $pregunta->val_r_04 }}"
                                                                 onchange="getVals(this, 'question_1');" />
                                                             <label class="radio"
                                                                 for="r_{{ $pregunta->id }}_{{ $pregunta->tipo_r_04 }}"></label>
@@ -286,8 +287,8 @@
                                                         <div class="checkbox_radio_container">
                                                             <input type="radio"
                                                                 id="r_{{ $pregunta->id }}_{{ $pregunta->tipo_r_03 }}"
-                                                                name="val_r_{{$pregunta->cod_num_preg}}" class="required"
-                                                                value="{{ $pregunta->val_r_03 }}"
+                                                                name="val_r_{{ $pregunta->cod_num_preg }}"
+                                                                class="required" value="{{ $pregunta->val_r_03 }}"
                                                                 onchange="getVals(this, 'question_1');" />
                                                             <label class="radio"
                                                                 for="r_{{ $pregunta->id }}_{{ $pregunta->tipo_r_03 }}"></label>
@@ -300,8 +301,8 @@
                                                         <div class="checkbox_radio_container">
                                                             <input type="radio"
                                                                 id="r_{{ $pregunta->id }}_{{ $pregunta->tipo_r_02 }}"
-                                                                name="val_r_{{$pregunta->cod_num_preg}}" class="required"
-                                                                value="{{ $pregunta->val_r_04 }}"
+                                                                name="val_r_{{ $pregunta->cod_num_preg }}"
+                                                                class="required" value="{{ $pregunta->val_r_04 }}"
                                                                 onchange="getVals(this, 'question_1');" />
                                                             <label class="radio"
                                                                 for="r_{{ $pregunta->id }}_{{ $pregunta->tipo_r_02 }}"></label>
@@ -315,8 +316,8 @@
                                                         <div class="checkbox_radio_container">
                                                             <input type="radio"
                                                                 id="r_{{ $pregunta->id }}_{{ $pregunta->tipo_r_01 }}"
-                                                                name="val_r_{{$pregunta->cod_num_preg}}" class="required"
-                                                                value="{{ $pregunta->val_r_01 }}"
+                                                                name="val_r_{{ $pregunta->cod_num_preg }}"
+                                                                class="required" value="{{ $pregunta->val_r_01 }}"
                                                                 onchange="getVals(this, 'question_1');" />
                                                             <label class="radio"
                                                                 for="r_{{ $pregunta->id }}_{{ $pregunta->tipo_r_01 }}"></label>
@@ -473,9 +474,9 @@
                     </button>
                 </div>
             </div> --}}
-            <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
+    <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
     </div>
     <!-- /.modal -->
 
@@ -483,6 +484,61 @@
     <script src="/encuesta_assets/js/jquery-3.2.1.min.js"></script>
     <script src="/encuesta_assets/js/common_scripts.min.js"></script>
     <script src="/encuesta_assets/js/functions.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    @if (session('error'))
+        <script>
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 6000,
+                timerProgressBar: true,
+
+            })
+            Toast.fire({
+                icon: 'error',
+                title: 'Segun tu fecha de nacimiento eres menor de edad. Por favor ingresar la fecha de nacimiento correcta!'
+            })
+        </script>
+    @endif
+
+
+    @error('fec_nac_encuestado')
+        <script>
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-start',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+
+            })
+            Toast.fire({
+                icon: 'error',
+                title: 'Por favor ingresar una fecha de nacimiento correcta!!'
+            })
+        </script>
+    @enderror
+
+    @error('fec_ing_encuestado')
+        <script>
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+
+            })
+            Toast.fire({
+                icon: 'error',
+                title: 'Por favor ingresar una fecha de ingreso correcta!!'
+            })
+        </script>
+    @enderror
 
     <!-- Wizard script -->
     <script src="/encuesta_assets/js/survey_func.js"></script>
