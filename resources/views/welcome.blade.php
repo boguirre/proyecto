@@ -203,7 +203,7 @@
                                             <div class="col-lg-6 col-md-6 col-6">
                                                 <div class="form-group">
                                                     <label for="age">Area</label>
-                                                    <select name="area" id="" class="form-control"
+                                                    <select name="area_id" id="" class="form-control"
                                                         required>
 
                                                         @foreach ($areas as $area)
@@ -217,7 +217,7 @@
                                             <div class="col-6">
                                                 <div class="form-group">
                                                     <label for="age">Genero</label>
-                                                    <select name="genero" id="" class="form-control"
+                                                    <select name="genero_id" id="" class="form-control"
                                                         required>
 
                                                         @foreach ($generos as $genero)
@@ -258,7 +258,7 @@
                                                         <div class="checkbox_radio_container">
                                                             <input type="radio"
                                                                 id="r_{{ $pregunta->id }}_{{ $pregunta->tipo_r_05 }}"
-                                                                name="question_{{$pregunta->id}}" class="required"
+                                                                name="val_r_{{$pregunta->cod_num_preg}}" class="required"
                                                                 value="{{ $pregunta->val_r_05 }}"
                                                                 onchange="getVals(this, 'question_1');" />
                                                             <label class="radio"
@@ -272,7 +272,7 @@
                                                         <div class="checkbox_radio_container">
                                                             <input type="radio"
                                                                 id="r_{{ $pregunta->id }}_{{ $pregunta->tipo_r_04 }}"
-                                                                name="question_{{$pregunta->id}}" class="required"
+                                                                name="val_r_{{$pregunta->cod_num_preg}}" class="required"
                                                                 value="{{ $pregunta->val_r_04 }}"
                                                                 onchange="getVals(this, 'question_1');" />
                                                             <label class="radio"
@@ -286,7 +286,7 @@
                                                         <div class="checkbox_radio_container">
                                                             <input type="radio"
                                                                 id="r_{{ $pregunta->id }}_{{ $pregunta->tipo_r_03 }}"
-                                                                name="question_{{$pregunta->id}}" class="required"
+                                                                name="val_r_{{$pregunta->cod_num_preg}}" class="required"
                                                                 value="{{ $pregunta->val_r_03 }}"
                                                                 onchange="getVals(this, 'question_1');" />
                                                             <label class="radio"
@@ -300,7 +300,7 @@
                                                         <div class="checkbox_radio_container">
                                                             <input type="radio"
                                                                 id="r_{{ $pregunta->id }}_{{ $pregunta->tipo_r_02 }}"
-                                                                name="question_{{$pregunta->id}}" class="required"
+                                                                name="val_r_{{$pregunta->cod_num_preg}}" class="required"
                                                                 value="{{ $pregunta->val_r_04 }}"
                                                                 onchange="getVals(this, 'question_1');" />
                                                             <label class="radio"
@@ -315,7 +315,7 @@
                                                         <div class="checkbox_radio_container">
                                                             <input type="radio"
                                                                 id="r_{{ $pregunta->id }}_{{ $pregunta->tipo_r_01 }}"
-                                                                name="question_{{$pregunta->id}}" class="required"
+                                                                name="val_r_{{$pregunta->cod_num_preg}}" class="required"
                                                                 value="{{ $pregunta->val_r_01 }}"
                                                                 onchange="getVals(this, 'question_1');" />
                                                             <label class="radio"
