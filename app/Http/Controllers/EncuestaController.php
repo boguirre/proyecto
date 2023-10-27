@@ -20,22 +20,50 @@ class EncuestaController extends Controller
         $generos = Genero::all();
         $areas = Area::all();
 
+        $encuestas = Encuestado::all()->count();
         $empresa = Empresa::all()->first();
 
-        $añoActual = Carbon::now()->format('d-m-Y');
+        $cantidad_encuestados = $empresa->cantidad_trabajadores;
+
+
+        $añoActual = Carbon::now('America/Lima')->format('d-m-Y');
 
         $fechaLimite = Carbon::createFromFormat('Y-m-d', $empresa->fecha_limite);
         $fechaLimiteFormateada = $fechaLimite->format('d-m-Y');
 
-        if ($añoActual <= $fechaLimiteFormateada) {
+        // if ($añoActual < $fechaLimiteFormateada) {
 
-            return view('welcome', compact('preguntas', 'generos', 'areas'));
-            //return "ok";
-        } else {
-            return view('error');
-            //return "No";
+        //     //return view('welcome', compact('preguntas', 'generos', 'areas'));
+        //     return view('error');
+        //     //return "ok";
+        // } else if($encuestas >= $cantidad_encuestados) {
+
+        //     return view('mensaje');
+        //     //return "No";
+        // }
+        // else{
+        //     return view('welcome', compact('preguntas', 'generos', 'areas')); 
+        // }
+
+        switch (true) {
+            case $añoActual > $fechaLimiteFormateada:
+                return view('error');
+                break;
+
+            case $encuestas >= $cantidad_encuestados:
+                return view('mensaje');
+                break;
+
+            case $añoActual == $fechaLimiteFormateada:
+                return view('welcome', compact('preguntas', 'generos', 'areas'));
+                break;
+
+            default:
+                return view('welcome', compact('preguntas', 'generos', 'areas'));
+                break;
         }
 
+        //return $añoActual;
         //return view('welcome', compact('preguntas', 'generos', 'areas'));
 
         //return $fechaLimiteFormateada;
