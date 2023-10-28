@@ -50,6 +50,7 @@ Route::resource('pregunta', PreguntaController::class)->names('pregunta');
 Route::post('pregunta/{preguntum}/activar', [PreguntaController::class, 'activar'])->name('pregunta.activar');
 Route::get('encuesta', [EncuestaController::class, 'index'])->name('encuesta.index');
 Route::post('encuesta/enviar_respuestas', [EncuestaController::class, 'store'])->name('encuesta.store');
+Route::get('encuesta/export', [EncuestaController::class, 'export'])->name('encuesta.export');
 
 
 Route::post('tipo-respuestas/{tipo_respuesta}/activar', [TipoRespuestaController::class, 'activar'])->name('tipo-respuestas.activar');

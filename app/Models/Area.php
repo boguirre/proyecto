@@ -10,4 +10,9 @@ class Area extends Model
     use HasFactory;
     protected $guarded = ['id'];
 
+    public function encuestados()
+    {
+        return $this->hasMany(Encuestado::class);
+    }
+
 }

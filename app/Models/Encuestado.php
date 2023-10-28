@@ -9,4 +9,14 @@ class Encuestado extends Model
 {
     use HasFactory;
     protected $guarded = ['id'];
+
+    public function genero()
+    {
+        return $this->belongsTo(Genero::class);
+    }
+
+    public function area()
+    {
+        return $this->belongsTo(Area::class);
+    }
 }

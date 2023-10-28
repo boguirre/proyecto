@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\EncuestaExport;
 use App\Models\Area;
 use App\Models\Empresa;
 use App\Models\Encuestado;
 use App\Models\Genero;
 use App\Models\Pregunta;
 use Carbon\Carbon;
+use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Http\Request;
 
 class EncuestaController extends Controller
@@ -165,5 +167,10 @@ class EncuestaController extends Controller
         //     'rango_antiguedad_id' => $rango_antiguedad_id,
         //     'data' => $request->all()
         // ]);
+    }
+
+    public function export()
+    {
+        return new EncuestaExport();
     }
 }
